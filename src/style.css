@@ -38,6 +38,69 @@
   font-display: swap;
 }
 
+/* fonts DM-sans */
+@font-face {
+  font-family: "DM Sans";
+  src: url("./assets/fonts/DM-sans/DMSans_18pt-Thin.ttf");
+  font-weight: 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("./assets/fonts/DM-sans/DMSans_18pt-ExtraLight.ttf");
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("./assets/fonts/DM-sans/DMSans_18pt-Light.ttf");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("./assets/fonts/DM-sans/DMSans_18pt-Reguler.ttf");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("./assets/fonts/DM-sans/DMSans_18pt-Medium.ttf");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("./assets/fonts/DM-sans/DMSans_18pt-SemiBold.ttf");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("./assets/fonts/DM-sans/DMSans_18pt-Bold.ttf");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("./assets/fonts/DM-sans/DMSans_18pt-ExtraBold.ttf");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("./assets/fonts/DM-sans/DMSans_18pt-Black.ttf");
+  font-weight: 900;
+  font-display: swap;
+}
+
   --color-avocado-100: oklch(0.99 0 0);
   --color-avocado-200: oklch(0.98 0.04 113.22);
   --color-avocado-300: oklch(0.94 0.11 115.03);
