@@ -1,9 +1,7 @@
 @import "tailwindcss";
 
-@theme {
-
-  /* font */
- @font-face {
+/* font space grotesk */
+@font-face {
   font-family: "Space Grotesk";
   src: url("./assets/fonts/space-grotesk/SpaceGrotesk-Light.ttf");
   font-weight: 300;
@@ -101,8 +99,7 @@
   font-display: swap;
 }
 
-  --color-avocado-100: oklch(0.99 0 0);
-  --color-avocado-200: oklch(0.98 0.04 113.22);
-  --color-avocado-300: oklch(0.94 0.11 115.03);
-  /* ... */
+@theme {
+  /* color */
+  --color-background: #fcf9f8;
 }
