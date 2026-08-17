@@ -1,14 +1,3 @@
 import "./style.css";
 import "./assets/component/Navbar.js";
-
-const navLinks = document.querySelectorAll(".nav-link");
-
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    navLinks.forEach((item) => {
-      item.classList.remove("active");
-    });
-
-    link.classList.add("active");
-  });
-});
+import "./assets/component/SideBar.js";

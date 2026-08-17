@@ -136,5 +136,5 @@
 }
 
 .nav-link.active:hover {
-  @apply bg-nav-bg border-black font-bold shadow-[0_0_0_#000];
+  @apply bg-nav-bg border-black font-bold shadow-[0_0_0_#000] translate-x-[-5x] translate-y-[-5x];
 }
