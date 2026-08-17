@@ -1,8 +1,43 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Satoshi", "sans-serif";
-  --breakpoint-3xl: 120rem;
+
+  /* font */
+ @font-face {
+  font-family: "Space Grotesk";
+  src: url("./assets/fonts/space-grotesk/SpaceGrotesk-Light.ttf");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("./assets/fonts/space-grotesk/SpaceGrotesk-Reguler.ttf");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("./assets/fonts/space-grotesk/SpaceGrotesk-Medium.ttf");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("./assets/fonts/space-grotesk/SpaceGrotesk-SemiBold.ttf");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("./assets/fonts/space-grotesk/SpaceGrotesk-Bold.ttf");
+  font-weight: 700;
+  font-display: swap;
+}
+
   --color-avocado-100: oklch(0.99 0 0);
   --color-avocado-200: oklch(0.98 0.04 113.22);
   --color-avocado-300: oklch(0.94 0.11 115.03);
