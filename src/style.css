@@ -99,7 +99,42 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Space Mono";
+  src: url("./assets/fonts/space-mono/SpaceMono-Regular.ttf");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("./assets/fonts/space-mono/SpaceMono-Bold.ttf");
+  font-weight: 700;
+  font-display: swap;
+}
+
 @theme {
+  --font-title: "Space Grotesk", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-label: "Space Mono", monospace;
+
   /* color */
   --color-background: #fcf9f8;
+  --color-nav-bg: #88d498;
+}
+
+.nav-link {
+  @apply border-2 border-transparent p-2 transition-all duration-200;
+}
+
+.nav-link:hover {
+  @apply bg-nav-bg border-black font-bold;
+}
+
+.nav-link.active {
+  @apply bg-nav-bg border-black font-bold shadow-[5px_5px_0_#000];
+}
+
+.nav-link.active:hover {
+  @apply bg-nav-bg border-black font-bold shadow-[0_0_0_#000];
 }
