@@ -33,7 +33,7 @@ class Sidebar extends HTMLElement {
                          px-4 py-3 rounded-lg
                          transition-all duration-200"
                 >
-                  <span>⌂</span>
+                  <i class="fa-solid fa-house w-5 text-center"></i>
                   <span>Beranda</span>
                 </a>
               </li>
@@ -45,7 +45,7 @@ class Sidebar extends HTMLElement {
                          px-4 py-3 rounded-lg
                          transition-all duration-200"
                 >
-                  <span>○</span>
+                  <i class="fa-solid fa-user w-5 text-center"></i>
                   <span>Tentang Saya</span>
                 </a>
               </li>
@@ -57,7 +57,7 @@ class Sidebar extends HTMLElement {
                          px-4 py-3 rounded-lg
                          transition-all duration-200"
                 >
-                  <span>▣</span>
+                  <i class="fa-solid fa-diagram-project w-5 text-center"></i>
                   <span>Projek</span>
                 </a>
               </li>
@@ -69,7 +69,7 @@ class Sidebar extends HTMLElement {
                          px-4 py-3 rounded-lg
                          transition-all duration-200"
                 >
-                  <span>◇</span>
+                  <i class="fa-solid fa-code w-5 text-center"></i>
                   <span>Skill</span>
                 </a>
               </li>
@@ -81,7 +81,7 @@ class Sidebar extends HTMLElement {
                          px-4 py-3 rounded-lg
                          transition-all duration-200"
                 >
-                  <span>✉</span>
+                  <i class="fa-solid fa-envelope w-5 text-center"></i>
                   <span>Kontak</span>
                 </a>
               </li>
