@@ -2,12 +2,11 @@ class Sidebar extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <aside
-        class="fixed left-0 top-20 h-[calc(100vh-5rem)] w-64
+        class="fixed right-0 top-20 h-[calc(100vh-5rem)] w-64
                bg-white border-r-2 z-40"
       >
         <div class="flex flex-col h-full p-6">
 
-          <!-- Header Sidebar -->
           <div class="mb-8">
             <p class="font-label text-xs uppercase tracking-widest text-gray-400">
               Menu
@@ -18,7 +17,6 @@ class Sidebar extends HTMLElement {
             </h2>
           </div>
 
-          <!-- Navigation -->
           <nav>
             <ul class="flex flex-col gap-2 font-label">
 
@@ -110,6 +108,12 @@ class Sidebar extends HTMLElement {
 
         link.classList.add("active");
       });
+    });
+
+    document.addEventListener("toggle-sidebar", () => {
+      const sidebar = this.querySelector("aside");
+
+      sidebar.classList.toggle("translate-x-full");
     });
   }
 }
