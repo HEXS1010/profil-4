@@ -15,18 +15,26 @@
 
     <main>
       <section id="Home">
-        <div class="dot-grid-wrapper relative w-full h-[70vh] border-2 overflow-hidden">
-          <canvas class="dot-grid-canvas absolute inset-0 w-full h-full"></canvas>
-          <div class="relative z-10 h-full flex flex-col justify-center items-center gap-4">
-            <p class="font-label font-reguler text-center bg-nav-bg px-4 py-1 border-2 shadow-[2px_2px_0]">
+        <div
+          class="dot-grid-wrapper relative w-full h-[60vh] border-2 overflow-hidden"
+        >
+          <canvas
+            class="dot-grid-canvas absolute inset-0 w-full h-full"
+          ></canvas>
+          <div
+            class="relative z-10 h-full flex flex-col justify-center items-center gap-4"
+          >
+            <p
+              class="text-[10px] sm:text-xs font-label font-bold text-center bg-nav-bg px-3 sm:px-4 py-1 border-2 shadow-[2px_2px_0]"
+            >
               Halo dunia, Perkenalkan Saya HEXS
             </p>
-            <h1 class="max-w-4xl font-title font-bold text-center text-5xl/15">
-              Wujudkan ide tanpa batas lewat kode. <br />
+            <h1 class="max-w-xs sm:max-w-xl lg:max-w-4xl text-2xl sm:text-lg lg:text-5xl/15 font-title font-bold text-center">
+              Wujudkan ide tanpa batas lewat kode. <br class="hidden sm:block" />
               Dari layar kosong, jadi karya nyata.
             </h1>
 
-            <p class="max-w-3xl font-body font-medium text-center">
+            <p class="max-w-xs sm:max-w-3xl text-[11px] sm:text-xs font-body font-medium text-center">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sunt
               veritatis architecto id dolorem ducimus officiis, ab fugit nam, ea
               numquam pariatur debitis accusantium, dolorum quasi facere culpa
@@ -34,28 +42,75 @@
             </p>
 
             <!-- buttom -->
-            <div class="flex justify-center items-center gap-4">
-              <button class="flex justify-center items-center gap-4 font-label font-reguler bg-sidebar px-5 py-3 border-2 shadow-[3px_3px_0] transition duration-300 hover:font-bold hover:shadow-[5px_5px_0]">
+            <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-4">
+              <button
+                class="flex justify-center items-center gap-2 sm:gap-4 text-[10px] sm:text-xs font-label font-bold bg-sidebar px-3 sm:px-5 py-2 sm:py-3 border-2 shadow-[3px_3px_0] transition duration-300 hover:font-bold hover:shadow-[5px_5px_0]"
+              >
                 Lihat Projek Saya <i class="fa-solid fa-arrow-right"></i>
               </button>
-              <button class="font-label font-reguler px-5 py-3 bg-merah border-2 shadow-[3px_3px_0] ">Tentang Saya</button>
+              <button
+                class="text-[10px] font-bold sm:text-xs font-label font-reguler px-3 sm:px-5 py-2 sm:py-3 bg-merah border-2 shadow-[3px_3px_0]"
+              >
+                Tentang Saya
+              </button>
             </div>
 
-            <div class="absolute ">
-              <img class="border-2" src="/src/assets/img/javascript.webp" alt="Js">
+            <!-- icon hero-->
+            <img
+              class="hero-icon absolute top-[12%] left-[8%] w-14 hidden"
+              style="animation-delay: 0s"
+              src="/src/assets/img/javascript.webp"
+              alt="Js"
+            />
 
-              <img class="border-2" src="/src/assets/img/tailwindcss.webp" alt="tailwindcss">
+            <img
+              class="hero-icon absolute top-[18%] right-[10%] w-13 hidden"
+              style="animation-delay: 0.8s"
+              src="/src/assets/img/tailwindcss.webp"
+              alt="tailwindcss"
+            />
 
-              <img class="border-2" src="/src/assets/img/python.webp" alt="python">
+            <img
+              class="hero-icon absolute top-[60%] left-[5%] w-12 hidden"
+              style="animation-delay: 1.6s"
+              src="/src/assets/img/python.webp"
+              alt="python"
+            />
 
-              <img class="border-2" src="/src/assets/img/visual-studio-code.webp" alt="vs-code">
+            <img
+              class="hero-icon absolute top-[55%] right-[6%] w-14 hidden"
+              style="animation-delay: 0.4s"
+              src="/src/assets/img/visual-studio-code.webp"
+              alt="vs-code"
+            />
 
-              <img class="border-2" src="/src/assets/img/github-dark.webp" alt="github">
+            <img
+              class="hero-icon absolute top-[45%] left-[15%] w-11 hidden"
+              style="animation-delay: 1.2s"
+              src="/src/assets/img/github.webp"
+              alt="github"
+            />
 
-              <img class="border-2" src="/src/assets/img/html5.webp" alt="html5">
+            <img
+              class="hero-icon absolute top-[40%] right-[15%] w-11 hidden"
+              style="animation-delay: 2s"
+              src="/src/assets/img/html5.webp"
+              alt="html5"
+            />
 
-              <img class="border-2" src="/src/assets/img/git.webp" alt="git">
-            </div>
+            <img
+              class="hero-icon absolute bottom-[10%] left-[25%] w-12 hidden"
+              style="animation-delay: 0.6s"
+              src="/src/assets/img/git.webp"
+              alt="git"
+            />
+
+            <img
+              class="hero-icon absolute top-[80%] right-[25%] w-12 hidden"
+              style="animation-delay: 0.6s"
+              src="/src/assets/img/bootstrap.webp"
+              alt="bootstrap"
+            />
           </div>
         </div>
       </section>
