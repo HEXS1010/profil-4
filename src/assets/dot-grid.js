@@ -63,7 +63,7 @@ export function initDotGrid(wrapper) {
         dot.currentR += (dot.baseR - dot.currentR) * 0.05;
       }
 
-      const alpha = 0.15 + scale * 0.50;
+      const alpha = 0.15 + scale * 0.40;
       ctx.beginPath();
       ctx.arc(dot.x, dot.y, dot.currentR, 0, Math.PI * 2);
       ctx.fillStyle = `rgba(0, 0, 0, ${alpha})`;

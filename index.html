@@ -16,13 +16,13 @@
     <main>
       <section id="Home">
         <div
-          class="dot-grid-wrapper relative w-full h-[60vh] border-2 overflow-hidden"
+          class="dot-grid-wrapper relative w-full h-[60vh] md:h-[70vh] border-2 overflow-hidden"
         >
           <canvas
-            class="dot-grid-canvas absolute inset-0 w-full h-full"
+            class="dot-grid-canvas absolute inset-0 w-full h-full z-0"
           ></canvas>
           <div
-            class="relative z-10 h-full flex flex-col justify-center items-center gap-5"
+            class="relative z-20 h-full flex flex-col justify-center items-center gap-5"
           >
             <p
               class="text-[10px] sm:text-sm font-label font-bold sm:font-normal text-center bg-nav-bg px-3 sm:px-4 py-1 border-2 shadow-[2px_2px_0]"
@@ -34,7 +34,7 @@
               Dari layar kosong, jadi karya nyata.
             </h1>
 
-            <p class="max-w-xs sm:max-w-md  text-[11px] sm:text-xs font-body font-medium text-center">
+            <p class="max-w-xs sm:max-w-md lg:max-w-2xl text-[11px] sm:text-xs lg:text-base font-body font-medium text-center">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sunt
               veritatis architecto id dolorem ducimus officiis, ab fugit nam, ea
               numquam pariatur debitis accusantium, dolorum quasi facere culpa
@@ -44,12 +44,12 @@
             <!-- buttom -->
             <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-4">
               <button
-                class="flex justify-center items-center gap-2 sm:gap-4 text-[10px] sm:text-xs font-label font-bold bg-sidebar px-3 sm:px-5 py-2 sm:py-3 border-2 shadow-[3px_3px_0] transition duration-300 hover:font-bold hover:shadow-[5px_5px_0]"
+                class="flex justify-center items-center gap-2 sm:gap-4 text-[10px] sm:text-xs md:text-base font-label font-bold bg-sidebar px-3 sm:px-5 py-2 sm:py-3 border-2 shadow-[3px_3px_0] transition duration-300 hover:font-bold hover:shadow-[7px_7px_0] lg:font-normal"
               >
                 Lihat Projek Saya <i class="fa-solid fa-arrow-right"></i>
               </button>
               <button
-                class="text-[10px] font-bold sm:text-xs md:text-base font-label font-regular px-3 sm:px-5 py-2 sm:py-3 bg-merah border-2 shadow-[3px_3px_0]"
+                class="text-[10px] font-bold sm:text-xs md:text-base font-label font-regular lg:font-normal px-3 sm:px-5 py-2 sm:py-3 bg-merah border-2 shadow-[3px_3px_0] trasition duration-500 hover:shadow-[7px_7px_0] hover:font-bold"
               >
                 Tentang Saya
               </button>
@@ -57,56 +57,56 @@
 
             <!-- icon hero-->
             <img
-              class="hero-icon absolute sm:top-[12%] sm:left-[8%] sm:w-8 md:w-12 hidden sm:block"
+              class="hero-icon absolute z-20 sm:top-[12%] sm:left-[8%] lg:left-[15%] sm:w-8 lg:w-12 hidden sm:block"
               style="animation-delay: 0s"
               src="/src/assets/img/javascript.webp"
               alt="Js"
             />
 
             <img
-              class="hero-icon absolute sm:top-[14%] sm:right-[10%] sm:w-9 md:w-12 hidden sm:block"
+              class="hero-icon absolute z-20 sm:top-[14%] sm:right-[10%] lg:right-[15%] sm:w-9 lg:w-12 hidden sm:block"
               style="animation-delay: 0.8s"
               src="/src/assets/img/tailwindcss.webp"
               alt="tailwindcss"
             />
 
             <img
-              class="hero-icon absolute sm:top-[65%] sm:left-[10%] sm:w-8 md:w-12 hidden sm:block"
+              class="hero-icon absolute z-20 sm:top-[65%] sm:left-[10%] sm:w-8 lg:w-12 hidden sm:block"
               style="animation-delay: 1.6s"
               src="/src/assets/img/python.webp"
               alt="python"
             />
 
             <img
-              class="hero-icon absolute sm:top-[65%] right-[13%] sm:w-8 md:w-12 hidden sm:block"
+              class="hero-icon absolute z-20 sm:top-[65%] right-[13%] sm:w-8 lg:w-12 hidden sm:block"
               style="animation-delay: 0.4s"
               src="/src/assets/img/visual-studio-code.webp"
               alt="vs-code"
             />
 
             <img
-              class="hero-icon absolute sm:top-[40%] md:top-[40%] sm:left-[5%] sm:w-8 md:w-12 hidden sm:block"
+              class="hero-icon absolute z-20 sm:top-[40%] lg:top-[40%] sm:left-[5%] lg:left-[5%] sm:w-8 lg:w-10 hidden sm:block"
               style="animation-delay: 1.2s"
               src="/src/assets/img/github.webp"
               alt="github"
             />
 
             <img
-              class="hero-icon absolute sm:top-[40%] sm:right-[5%] sm:w-8 md:w-12 hidden sm:block"
+              class="hero-icon absolute z-20 sm:top-[40%] sm:right-[5%] sm:w-8 lg:w-10 hidden sm:block"
               style="animation-delay: 2s"
               src="/src/assets/img/html5.webp"
               alt="html5"
             />
 
             <img
-              class="hero-icon absolute sm:bottom-[10%] left-[20%] sm:w-8 md:w-12 hidden sm:block"
+              class="hero-icon absolute z-20 sm:bottom-[10%] sm:left-[20%] lg:left-[30%] sm:w-8 lg:w-11 hidden sm:block"
               style="animation-delay: 0.6s"
               src="/src/assets/img/git.webp"
               alt="git"
             />
 
             <img
-              class="hero-icon absolute sm:top-[84%] right-[20%] sm:w-8 md:w-12 hidden sm:block"
+              class="hero-icon absolute z-20 sm:top-[84%] right-[30%] sm:w-8 lg:w-11 hidden sm:block"
               style="animation-delay: 0.6s"
               src="/src/assets/img/bootstrap.webp"
               alt="bootstrap"
