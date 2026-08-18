@@ -120,9 +120,11 @@
   --font-label: "Space Mono", monospace;
 
   /* color */
-  --color-background: #fcf9f8;
-  --color-nav-bg: #88d498;
-  --color-sidebar: #ffd23f;
+  --color-background: #fcf9f8; /* putih cream gitu */
+  --color-nav-bg: #88d498; /* hijau soft */
+  --color-sidebar: #ffd23f; /* kuning soft */
+  --color-oren: #FFA552; /* kuning soft */
+  --color-merah: #FF6B6B; /* merah soft */
 }
 
 .nav-link {
