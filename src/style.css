@@ -151,3 +151,30 @@
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-4px); }
 }
+
+/* logo slider */
+.logo-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.logo-track {
+  display: flex;
+  width: max-content;
+  border: 2px solid black;
+
+}
+
+.logo-item {
+  flex-shrink: 0;
+  width: 55px;
+  height: 55px;
+  margin: 0 32px;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(0.4);
+  transition: filter 0.3s ease;
+}
+
+.logo-item:hover {
+  filter: grayscale(0%) opacity(1);
+}
