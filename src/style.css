@@ -99,6 +99,7 @@
   font-display: swap;
 }
 
+/* space mono */
 @font-face {
   font-family: "Space Mono";
   src: url("./assets/fonts/space-mono/SpaceMono-Regular.ttf");
@@ -121,7 +122,7 @@
   /* color */
   --color-background: #fcf9f8;
   --color-nav-bg: #88d498;
-  --color-sidebar: #FFD23F;
+  --color-sidebar: #ffd23f;
 }
 
 .nav-link {
