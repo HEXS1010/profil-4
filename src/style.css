@@ -189,19 +189,27 @@
 }
 
 .nav-link {
-  @apply border-2 border-transparent p-2 transition-all duration-200;
+  border: 2px solid transparent;
+  padding: 0.5rem;
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover {
-  @apply bg-nav-bg border-black font-bold;
+  background-color: var(--color-nav-bg);
+  border-color: black;
+  font-weight: 700;
 }
 
 .nav-link.active {
-  @apply bg-nav-bg border-black font-bold shadow-[5px_5px_0_#000];
+  background-color: var(--color-nav-bg);
+  border-color: black;
+  font-weight: 700;
+  box-shadow: 5px 5px 0 #000;
 }
 
 .nav-link.active:hover {
-  @apply bg-nav-bg border-black font-bold shadow-[0_0_0_#000] translate-x-[-5x] translate-y-[-5x];
+  box-shadow: 0 0 0 #000;
+  translate: 5px 5px;
 }
 
 /* grid background tentang saya */
