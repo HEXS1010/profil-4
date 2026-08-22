@@ -114,10 +114,62 @@
   font-display: swap;
 }
 
+/* plex-mono */
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("./assets/fonts/plex-mono/IBMPlexMono-Thin.ttf");
+  font-weight: 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("./assets/fonts/plex-mono/IBMPlexMono-ExtraLight.ttf");
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("./assets/fonts/plex-mono/IBMPlexMono-Light.ttf");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("./assets/fonts/plex-mono/IBMPlexMono-Regular.ttf");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("./assets/fonts/plex-mono/IBMPlexMono-Medium.ttf");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("./assets/fonts/plex-mono/IBMPlexMono-SemiBold.ttf");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("./assets/fonts/plex-mono/IBMPlexMono-Bold.ttf");
+  font-weight: 700;
+  font-display: swap;
+}
+
+
+
 @theme {
   --font-title: "Space Grotesk", sans-serif;
   --font-body: "DM Sans", sans-serif;
-  --font-label: "Space Mono", monospace;
+  --font-label: "IBM Plex Mono", monospace;;
 
   /* color */
   /*--color-background: #F5F5F5;*/ /* putih cream gitu */
