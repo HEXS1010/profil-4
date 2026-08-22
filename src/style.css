@@ -132,6 +132,8 @@
   --color-pink: #f7a8c4; /* pink soft */
   --color-bro: #fdf6e3; /* kream soft */
   --color-krim: #faecc8; /* kream soft */
+
+  /* shadow */
 }
 
 /* loop logo */
@@ -139,9 +141,9 @@
   width: 100%;
   display: flex;
   overflow-x: auto;
-  background: white;
   position: relative;
-  border-block: 3px solid black;
+  height: 145px;
+  /* border-block: 3px solid black; */
 }
 
 .loop::-webkit-scrollbar {
@@ -153,29 +155,56 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  /* gap: 1px; */
+  gap: 1em;
   animation: spin_scroll 45s infinite linear;
-  /* padding-right: 1px; */
+  padding-right: 1em;
 }
 
 .card {
   flex: 0 0 3em;
   height: 7.5rem;
-  padding: 1px;
+  /* padding: 1em; */
   /* background: white; */
   /* border-inline: 2px dotted black; */
+  background: white;
   font-size: 3.5rem;
   text-align: center;
-  justify-items: center;
-  align-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid black;
+  /* box-shadow: 5px 5px 0 var(--color-sidebar); */
+}
+
+.card:nth-child(odd) {
+  rotate: -2deg;
+}
+
+.card:nth-child(even) {
+  rotate: 2deg;
+}
+
+.card {
+  transition:
+    rotate 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  rotate: 0deg;
+}
+
+.card p {
+  margin-bottom: 0.35rem;
 }
 
 .card img {
+  margin-block: auto;
   filter: grayscale(100%) opacity(0.4);
   transition: filter 0.3s ease;
 }
 
-.card img:hover {
+.card:hover img {
   filter: grayscale(0%) opacity(1);
 }
 
