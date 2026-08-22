@@ -7,7 +7,7 @@ class Tooltip extends HTMLElement {
     this.innerHTML = `
       <div class="relative group inline-block">
         <span
-          class="font-label font-bold text-sm ${bg} px-3 py-1 border-2 shadow-[2px_2px_0] cursor-default"
+          class="font-label font-medium text-sm ${bg} px-3 py-1 border-2 shadow-[2px_2px_0] cursor-default"
         >
           ${text}
         </span>
@@ -16,7 +16,7 @@ class Tooltip extends HTMLElement {
           class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-150 whitespace-nowrap z-10"
         >
           <div
-            class="bg-white text-black text-xs font-label px-3 py-1.5 border-2 shadow-[2px_2px_0]"
+            class="bg-white text-black text-xs font-label font-medium px-3 py-1.5 border-2 shadow-[2px_2px_0]"
           >
             ${label}
           </div>
