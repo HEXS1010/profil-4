@@ -96,18 +96,18 @@ class Github extends HTMLElement {
       `
       }
       <div
-        class="grid gap-6 ${this.noHeader ? "mt-10" : "mt-20"} px-5 lg:grid-cols-[1fr_1.6fr] items-start"
+        class="grid gap-6 ${this.noHeader ? "mt-10" : "mt-20"} px-5 grid-cols-1 lg:grid-cols-[1fr_1.6fr] items-start"
       >
         ${
           user
-            ? `<div class="bg-white border-3 border-black shadow-[3px_3px_0] p-5 flex flex-col justify-center items-center gap-4">
+            ? `<div class="bg-white border-3 border-black shadow-[3px_3px_0] p-4 md:p-5 flex flex-col justify-center items-center gap-3 md:gap-4">
         <img
           src="${this.esc(user.avatar_url)}"
           alt="Avatar ${this.esc(user.login)}"
-          class="w-24 h-24 rounded-full border-3 object-cover"
+          class="w-20 h-20 md:w-24 md:h-24 rounded-full border-3 object-cover"
         />
-        <div>
-          <p class="font-title font-bold text-2xl leading-tight">
+        <div class="text-center">
+          <p class="font-title font-bold text-xl md:text-2xl leading-tight">
             ${this.esc(user.name || user.login)}
           </p>
           <a
@@ -121,17 +121,17 @@ class Github extends HTMLElement {
         </div>
         ${
           user.bio
-            ? `<p class="font-body font-medium text-sm text-slate-700">${this.esc(user.bio)}</p>`
+            ? `<p class="font-body font-medium text-xs md:text-sm text-slate-700 text-center">${this.esc(user.bio)}</p>`
             : ""
         }
-        <div class="flex flex-wrap gap-3">
+        <div class="flex flex-wrap gap-2 md:gap-3 justify-center">
           <span
-            class="flex items-center gap-2 font-label text-xs bg-krim border-2 shadow-[2px_2px_0] px-3 py-1.5"
+            class="flex items-center gap-1.5 md:gap-2 font-label text-[10px] md:text-xs bg-krim border-2 shadow-[2px_2px_0] px-2 md:px-3 py-1 md:py-1.5"
           >
             <i class="fa-solid fa-users"></i> ${user.followers} followers
           </span>
           <span
-            class="flex items-center gap-2 font-label text-xs bg-krim border-2 shadow-[2px_2px_0] px-3 py-1.5"
+            class="flex items-center gap-1.5 md:gap-2 font-label text-[10px] md:text-xs bg-krim border-2 shadow-[2px_2px_0] px-2 md:px-3 py-1 md:py-1.5"
           >
             <i class="fa-solid fa-folder-open"></i> ${user.public_repos} repo
           </span>
@@ -141,10 +141,10 @@ class Github extends HTMLElement {
         }
 
         <div
-          class="bg-bro border-3 border-black shadow-[3px_3px_0] p-6 flex flex-col gap-5"
+          class="bg-bro border-3 border-black shadow-[3px_3px_0] p-4 md:p-6 flex flex-col gap-4 md:gap-5"
         >
           <p class="font-body text-sm md:text-base">
-            <span class="font-title font-bold text-3xl md:text-4xl mr-2"
+            <span class="font-title font-bold text-2xl md:text-4xl mr-2"
               >${total}</span
             >
             kontribusi dalam setahun terakhir
