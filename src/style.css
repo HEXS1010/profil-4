@@ -99,21 +99,6 @@
   font-display: swap;
 }
 
-/* space mono */
-@font-face {
-  font-family: "Space Mono";
-  src: url("./assets/fonts/space-mono/SpaceMono-Regular.ttf");
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Space Mono";
-  src: url("./assets/fonts/space-mono/SpaceMono-Bold.ttf");
-  font-weight: 700;
-  font-display: swap;
-}
-
 /* plex-mono */
 @font-face {
   font-family: "IBM Plex Mono";
