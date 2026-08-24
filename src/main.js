@@ -3,6 +3,7 @@ import "./assets/font-awesome/css/all.min.css";
 import "./assets/component/Navbar.js";
 import "./assets/component/SideBar.js";
 import "./assets/component/Tooltip.js";
+import "./assets/component/Breadcrumb.js";
 import "./assets/component/Github.js";
 import "./assets/component/Footer.js";
 import "./assets/component/card-project.js";
