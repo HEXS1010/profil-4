@@ -67,7 +67,7 @@ class Footer extends HTMLElement {
             <!-- navigasi -->
             <nav class="flex flex-col gap-4 items-center md:items-start text-center md:text-left">
               <h6 class="font-title font-bold text-2xl">Menu</h6>
-              <ul class="flex flex-col gap-2">
+              <ul class="flex flex-col gap-4">
                 <li class="font-label font-medium text-base">
                   <a href="index.html"> Beranda </a>
                 </li>

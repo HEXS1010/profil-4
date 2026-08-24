@@ -4,7 +4,7 @@ const localProjects = [
     title: "Web Ramen",
     category: "Lomba",
     date: "18/8/2026",
-    image: "https://placehold.org/640x360",
+    image: "src/assets/img/ilustrasi.png",
     alt: "Tangkapan layar website Web Ramen",
     desc: "Landing page warung ramen interaktif dengan menu digital dan simulasi pemesanan online.",
     content: `
@@ -34,7 +34,7 @@ const localProjects = [
     title: "Portofolio Neo-Brutalisme",
     category: "Pribadi",
     date: "20/8/2026",
-    image: "https://placehold.org/640x360",
+    image: "src/assets/img/ilustrasi.png",
     alt: "Tangkapan layar website portofolio",
     desc: "Website portofolio pribadi bergaya neo-brutalisme dengan Web Components dan heatmap GitHub real-time.",
     content: `
@@ -63,7 +63,7 @@ const localProjects = [
     title: "Aplikasi Kasir Warung",
     category: "Klien",
     date: "2/7/2026",
-    image: "https://placehold.org/640x360",
+    image: "src/assets/img/ilustrasi.png",
     alt: "Tangkapan layar aplikasi kasir warung",
     desc: "Aplikasi kasir sederhana untuk UMKM dengan rekap penjualan harian dan cetak struk.",
     content: `
@@ -87,7 +87,7 @@ const localProjects = [
     title: "Info Cuaca Bali",
     category: "Pribadi",
     date: "14/6/2026",
-    image: "https://placehold.org/640x360",
+    image: "src/assets/img/ilustrasi.png",
     alt: "Tangkapan layar aplikasi info cuaca Bali",
     desc: "Dashboard prakiraan cuaca untuk kabupaten di Bali menggunakan API cuaca terbuka.",
     content: `
@@ -111,7 +111,7 @@ const localProjects = [
     title: "Kalkulator Diskon",
     category: "Lomba",
     date: "28/5/2026",
-    image: "https://placehold.org/640x360",
+    image: "src/assets/img/ilustrasi.png",
     alt: "Tangkapan layar kalkulator diskon",
     desc: "Kalkulator diskon bertema neo-brutalisme untuk hitung harga akhir, pajak, dan hemat belanja.",
     content: `
@@ -135,7 +135,7 @@ const localProjects = [
     title: "Website Profil Sekolah",
     category: "Klien",
     date: "9/4/2026",
-    image: "https://placehold.org/640x360",
+    image: "src/assets/img/ilustrasi.png",
     alt: "Tangkapan layar website profil sekolah",
     desc: "Website profil sekolah dengan pengumuman, agenda, dan galeri kegiatan siswa.",
     content: `

@@ -18,11 +18,11 @@ class DetailBody extends HTMLElement {
       <img
         src="${project.image}"
         alt="${project.alt}"
-        class="w-full aspect-video object-cover border-3 shadow-[6px_6px_0]"
+        class="w-xl aspect-video object-cover border-3"
       />
 
       <div
-        class="project-content font-body font-medium text-base md:text-lg mt-10"
+        class="project-content font-label font-medium text-base md:text-lg mt-10"
       >
         ${project.content}
       </div>
