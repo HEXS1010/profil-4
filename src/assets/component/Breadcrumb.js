@@ -96,21 +96,23 @@ class Breadcrumb extends HTMLElement {
 
     paths.forEach((path, index) => {
       const isLast = index === paths.length - 1;
-      
+
       if (isLast) {
         htmlContent += `
-          <div class="flex items-center gap-1.5 bg-nav-bg border-2 border-black px-3 py-1 shadow-[2px_2px_0_rgba(0,0,0,1)] text-black font-semibold cursor-default">
+          <div class="flex items-center gap-1.5 text-black font-medium cursor-default">
             ${path.icon ? `<i class="${path.icon}"></i>` : ""}
             <span>${path.name}</span>
           </div>
         `;
       } else {
         htmlContent += `
-          <a href="${path.url}" class="flex items-center gap-1.5 bg-white border-2 border-black px-3 py-1 hover:bg-sidebar transition-colors duration-200 shadow-[2px_2px_0_rgba(0,0,0,1)] text-black font-medium focus:outline-none focus:ring-0">
+          <a href="${path.url}" class="flex items-center gap-1.5 text-black font-medium focus:outline-none focus:ring-0">
             ${path.icon ? `<i class="${path.icon}"></i>` : ""}
             <span>${path.name}</span>
           </a>
-          <span class="text-black font-bold text-base md:text-lg select-none" aria-hidden="true">➔</span>
+          <span class="text-black flex items-center justify-center h-full text-xs" aria-hidden="true">
+            <i class="fa-solid fa-chevron-right"></i>
+          </span>
         `;
       }
     });
