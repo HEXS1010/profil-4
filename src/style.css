@@ -165,7 +165,7 @@
   --color-oren: #ffa552; /* oren soft */
   --color-merah: #ff6b6b; /* merah soft */
   --color-ungu: #b8a9fa; /* ungu soft */
-  --color-biru: #74b9ff; /* ungu soft */
+  --color-biru: #74b9ff; /* biru soft */
   --color-pink: #f7a8c4; /* pink soft */
   --color-bro: #fdf6e3; /* kream soft */
   --color-krim: #faecc8; /* kream soft */
@@ -365,7 +365,12 @@
   margin-top: 1rem;
 }
 
-.project-content h3 {
+.project-content {
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+.project-content :is(h1, h2, h3, h4, h5, h6) {
   font-family: var(--font-title);
   font-weight: 700;
   font-size: 1.375rem;

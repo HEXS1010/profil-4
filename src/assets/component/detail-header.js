@@ -16,6 +16,25 @@ class DetailHeader extends HTMLElement {
       return;
     }
 
+    const linkClass =
+      "inline-flex items-center gap-3 font-label font-medium border-3 shadow-[2px_2px_0] px-5 py-2 transition-all duration-300 hover:translate-x-1 hover:translate-y-1 hover:shadow-[0_0_0]";
+
+    const links = [];
+
+    if (project.demo) {
+      links.push(`
+        <a href="${project.demo}" target="_blank" rel="noopener" class="${linkClass} bg-biru"
+          >Pertinjau Demo <i class="fa-solid fa-eye"></i></a>
+      `);
+    }
+
+    if (project.repo) {
+      links.push(`
+        <a href="${project.repo}" target="_blank" rel="noopener" class="${linkClass} bg-oren"
+          ><i class="fa-brands fa-github"></i> Source Code</a>
+      `);
+    }
+
     document.title = `${project.title} · Projek`;
     this.innerHTML = `
       <div class="flex flex-col gap-7">
@@ -27,7 +46,7 @@ class DetailHeader extends HTMLElement {
         </p>
       </div>
 
-      <div class="flex flex-wrap gap-5 mt-10">
+      <div class="flex flex-wrap items-center gap-5 mt-10">
         <span
           class="${categoryColor(project.category)} px-5 py-2 font-label font-medium text-base border-3 shadow-[2px_2px_0]"
           ><i class="fa-solid fa-code"></i> ${project.category}</span
@@ -36,6 +55,11 @@ class DetailHeader extends HTMLElement {
           class="bg-sidebar px-5 py-2 font-label font-medium text-base border-3 shadow-[2px_2px_0]"
           ><i class="fa-regular fa-calendar"></i> ${project.date}</span
         >
+        ${
+          links.length > 0
+            ? `<div class="flex flex-wrap items-center gap-4 md:ml-auto">${links.join("")}</div>`
+            : ""
+        }
       </div>
     `;
 

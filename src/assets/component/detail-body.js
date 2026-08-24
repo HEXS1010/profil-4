@@ -18,42 +18,15 @@ class DetailBody extends HTMLElement {
       <img
         src="${project.image}"
         alt="${project.alt}"
-        class="w-xl aspect-video object-cover border-3"
+        class="w-xl aspect-video object-cover border-3 block mx-auto"
       />
 
       <div
-        class="project-content font-label font-medium text-base md:text-lg mt-10"
+        class="project-content md:text-lg mt-10"
       >
         ${project.content}
       </div>
-
-      ${this.actionLinks(project)}
     `;
-  }
-
-  actionLinks(project) {
-    const linkClass =
-      "inline-flex items-center gap-3 font-label font-medium border-3 shadow-[6px_6px_0] px-5 py-3 transition-all duration-300 hover:translate-x-1.5 hover:translate-y-1.5 hover:shadow-[0_0_0]";
-
-    const links = [];
-
-    if (project.demo) {
-      links.push(`
-        <a href="${project.demo}" target="_blank" rel="noopener" class="${linkClass} bg-nav-bg"
-          >Pertinjau Demo <i class="fa-solid fa-eye"></i></a>
-      `);
-    }
-
-    if (project.repo) {
-      links.push(`
-        <a href="${project.repo}" target="_blank" rel="noopener" class="${linkClass} bg-sidebar"
-          ><i class="fa-brands fa-github"></i> Source Code</a>
-      `);
-    }
-
-    if (links.length === 0) return "";
-
-    return `<div class="flex flex-wrap items-center gap-4 mt-10">${links.join("")}</div>`;
   }
 
   skeleton() {

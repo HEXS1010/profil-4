@@ -26,8 +26,8 @@ const localProjects = [
         framework, sehingga ukuran bundle tetap kecil dan waktu muat cepat.
       </p>
     `,
-    demo: "",
-    repo: "",
+    demo: "#",
+    repo: "#",
   },
   {
     id: "portofolio-neo",
@@ -55,8 +55,8 @@ const localProjects = [
         dikelola lewat halaman admin tanpa menyentuh kode sama sekali.
       </p>
     `,
-    demo: "",
-    repo: "",
+    demo: "#",
+    repo: "#",
   },
   {
     id: "kasir-warung",
@@ -79,8 +79,8 @@ const localProjects = [
         <li>Cetak struk Thermal Printer</li>
       </ul>
     `,
-    demo: "",
-    repo: "",
+    demo: "#",
+    repo: "#",
   },
   {
     id: "cuaca-bali",
@@ -103,8 +103,8 @@ const localProjects = [
         <li>Mode gelap otomatis mengikuti jam perangkat</li>
       </ul>
     `,
-    demo: "",
-    repo: "",
+    demo: "#",
+    repo: "#",
   },
   {
     id: "kalkulator-diskon",
@@ -127,8 +127,8 @@ const localProjects = [
         <li>Riwayat perhitungan yang bisa dihapus satu-satu</li>
       </ul>
     `,
-    demo: "",
-    repo: "",
+    demo: "#",
+    repo: "#",
   },
   {
     id: "web-sekolah",
@@ -151,8 +151,8 @@ const localProjects = [
         <li>Halaman kontak terhubung WhatsApp</li>
       </ul>
     `,
-    demo: "",
-    repo: "",
+    demo: "#",
+    repo: "#",
   },
 ];
 
