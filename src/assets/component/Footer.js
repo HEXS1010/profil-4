@@ -1,7 +1,7 @@
 class Footer extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <footer class="grid-bg border-t-4">
+      <footer class="grid-bg border-t-3">
         <div class="max-w-7xl mx-auto py-15 px-5">
           <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <!-- kontak -->

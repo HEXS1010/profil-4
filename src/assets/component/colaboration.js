@@ -1,7 +1,7 @@
 class colaboration extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <section>
+      <section class="border-t-3">
         <div class="max-w-5xl mx-auto py-20 px-5">
           <div
             class="py-10 px-20 bg-sidebar border-3 shadow-[4px_4px_0] flex justify-between items-center -rotate-1 transition-all duration-400 hover:rotate-0"
