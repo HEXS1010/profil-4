@@ -28,7 +28,11 @@ class cardProject extends HTMLElement {
       <article
         class="flex flex-col gap-4 bg-white border-3 shadow-[3px_3px_0] p-4 transition-all duration-300 hover:translate-x-0.75 hover:translate-y-0.75 hover:shadow-[0_0_0]"
       >
-        <img src="${project.image}" alt="${project.alt}" />
+        <img
+          src="${project.image}"
+          alt="${project.alt}"
+          class="w-full aspect-video object-cover border-2"
+        />
 
         <div class="mt-3 flex justify-between items-center">
           <span
@@ -68,7 +72,7 @@ class cardProject extends HTMLElement {
       <div
         class="flex flex-col gap-4 bg-white border-3 shadow-[3px_3px_0] p-4 h-[26rem] animate-pulse"
       >
-        <div class="bg-gray-200 border-2 h-48"></div>
+        <div class="bg-gray-200 border-2 aspect-video"></div>
         <div class="bg-gray-200 border-2 h-6 w-24"></div>
         <div class="bg-gray-200 border-2 h-7 w-3/4"></div>
         <div class="bg-gray-200 border-2 h-5"></div>
