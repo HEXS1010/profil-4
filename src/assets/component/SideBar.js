@@ -1,9 +1,9 @@
 class Sidebar extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <div id="sidebar-overlay" class="fixed inset-0 bg-black/50 z-[99] opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out"></div>
+      <div id="sidebar-overlay" class="fixed inset-0 bg-black/50 z-99 opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out"></div>
       <aside
-        class="fixed right-0 top-0 h-screen w-64 bg-background border-l-2 z-[100] translate-x-full transition-all duration-500 ease-in-out"
+        class="fixed right-0 top-0 h-screen w-64 bg-background border-l-2 z-100 translate-x-full transition-all duration-500 ease-in-out"
       >
         <div class="flex flex-col h-full p-6">
 

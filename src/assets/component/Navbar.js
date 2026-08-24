@@ -1,7 +1,7 @@
 class Navbar extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <nav id="main-navbar" class="fixed top-0 left-0 w-full bg-white border-b-4 h-20 z-[90] transition-transform duration-500 ease-in-out">
+      <nav id="main-navbar" class="fixed top-0 left-0 w-full bg-white border-b-4 h-20 z-90 transition-transform duration-500 ease-in-out">
         <div class="mx-auto w-full h-full max-w-7xl px-6">
           <div class="flex justify-between items-center h-full">
             <div>
