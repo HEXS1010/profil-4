@@ -5,6 +5,7 @@ import "./assets/component/SideBar.js";
 import "./assets/component/Tooltip.js";
 import "./assets/component/Github.js";
 import "./assets/component/Footer.js";
+import "./assets/component/card-project.js";
 import { initDotGrid } from "./assets/dot-grid.js";
 // import { initLogoSlider } from "./assets/logo-slider.js";
 
