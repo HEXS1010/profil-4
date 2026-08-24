@@ -5,7 +5,7 @@ class Navbar extends HTMLElement {
         <div class="mx-auto w-full h-full max-w-7xl px-6">
           <div class="flex justify-between items-center h-full">
             <div>
-              <h1 class="font-title font-bold text-2xl">Protofolio saya</h1>
+              <p class="font-title font-bold text-2xl">Protofolio saya</p>
             </div>
 
             <ul

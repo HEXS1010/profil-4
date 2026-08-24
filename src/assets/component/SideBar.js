@@ -13,9 +13,9 @@ class Sidebar extends HTMLElement {
                 Menu
               </p>
 
-              <h2 class="font-title font-bold text-xl mt-2">
+              <p class="font-title font-bold text-xl mt-2">
                 Portfolio
-              </h2>
+              </p>
             </div>
 
             <button id="sidebar-close" type="button" class="text-2xl w-10 h-10 flex items-center justify-center rounded-full bg-sidebar shadow-[2px_2px_0] border-2 hover:rotate-90 transition-all duration-200" aria-label="Tutup sidebar">

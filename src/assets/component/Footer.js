@@ -1,12 +1,12 @@
 class Footer extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <footer class="grid-bg">
+      <footer class="grid-bg border-t-4">
         <div class="max-w-7xl mx-auto py-15 px-5">
           <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <!-- kontak -->
             <div class="flex flex-col gap-4 items-center md:items-end text-center md:text-right">
-              <h6 class="font-title font-bold text-2xl">Kontak Saya</h6>
+              <h5 class="font-title font-bold text-2xl">Kontak Saya</h5>
               <p class="flex flex-col gap-1">
                 <span class="font-title font-medium">Email</span>
                 <span>@gmail.com</span>
