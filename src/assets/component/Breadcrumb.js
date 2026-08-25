@@ -1,11 +1,11 @@
 class Breadcrumb extends HTMLElement {
   connectedCallback() {
     this.render();
-    
+
     // Listen to history state changes (popstate) so it updates if they navigate or change search params
     this.handleLocationChange = this.handleLocationChange.bind(this);
     window.addEventListener("popstate", this.handleLocationChange);
-    
+
     // Listen to a custom event in case of dynamic SPA-like route/filter changes
     this.handleCustomUpdate = this.handleCustomUpdate.bind(this);
     document.addEventListener("breadcrumb-update", this.handleCustomUpdate);
@@ -37,7 +37,10 @@ class Breadcrumb extends HTMLElement {
         try {
           paths = JSON.parse(pathsAttr);
         } catch (e) {
-          console.error("Failed to parse paths attribute in breadcrumb-com:", e);
+          console.error(
+            "Failed to parse paths attribute in breadcrumb-com:",
+            e,
+          );
         }
       }
     }
@@ -45,7 +48,11 @@ class Breadcrumb extends HTMLElement {
     // If paths are still empty, auto-detect from URL
     if (paths.length === 0) {
       // 1. Always start with Beranda (Home)
-      paths.push({ name: "Beranda", url: "index.html", icon: "fa-solid fa-house" });
+      paths.push({
+        name: "Beranda",
+        url: "index.html",
+        icon: "fa-solid fa-house",
+      });
 
       const pathname = window.location.pathname;
       const filename = pathname.split("/").pop() || "index.html";
@@ -54,37 +61,51 @@ class Breadcrumb extends HTMLElement {
       if (filename !== "index.html" && filename !== "") {
         // Handle Project Page
         if (filename.toLowerCase().includes("project")) {
-          paths.push({ name: "Projek", url: "project.html", icon: "fa-solid fa-folder" });
-          
+          paths.push({
+            name: "Projek",
+            url: "project.html",
+            icon: "fa-solid fa-folder",
+          });
+
           // Check if there is a category query parameter (e.g. ?category=website)
           const urlParams = new URLSearchParams(window.location.search);
           const category = urlParams.get("category");
           if (category) {
             let categoryName = category;
             let icon = "fa-solid fa-code";
-            
+
             // Format standard category names nicely
             if (category === "website" || category === "webside") {
               categoryName = "Website";
               icon = "fa-solid fa-code";
-            } else if (category === "uiux" || category === "ui-ux" || category === "design") {
+            } else if (
+              category === "uiux" ||
+              category === "ui-ux" ||
+              category === "design"
+            ) {
               categoryName = "UI/UX Design";
               icon = "fa-solid fa-palette";
             } else {
-              categoryName = category.charAt(0).toUpperCase() + category.slice(1);
+              categoryName =
+                category.charAt(0).toUpperCase() + category.slice(1);
             }
 
-            paths.push({ 
-              name: categoryName, 
-              url: `project.html?category=${category}`, 
-              icon: icon 
+            paths.push({
+              name: categoryName,
+              url: `project.html?category=${category}`,
+              icon: icon,
             });
           }
         } else {
           // General fallback for other future pages (e.g., about.html, skills.html)
           const cleanName = filename.replace(".html", "");
-          const formattedName = cleanName.charAt(0).toUpperCase() + cleanName.slice(1);
-          paths.push({ name: formattedName, url: filename, icon: "fa-solid fa-circle" });
+          const formattedName =
+            cleanName.charAt(0).toUpperCase() + cleanName.slice(1);
+          paths.push({
+            name: formattedName,
+            url: filename,
+            icon: "fa-solid fa-message",
+          });
         }
       }
     }
@@ -99,7 +120,8 @@ class Breadcrumb extends HTMLElement {
 
       if (isLast) {
         htmlContent += `
-          <div class="flex items-center gap-1.5 text-black font-medium cursor-default">
+          <div class="flex items-center gap-1.5 text-black font-medium
+           cursor-default">
             ${path.icon ? `<i class="${path.icon}"></i>` : ""}
             <span>${path.name}</span>
           </div>
