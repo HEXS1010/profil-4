@@ -41,7 +41,7 @@ class DetailHeader extends HTMLElement {
         <h1 class="font-title font-bold text-xl md:text-5xl">
           <i class="fa-solid fa-folder"></i> ${project.title}
         </h1>
-        <p class="font-body font-medium text-base max-w-7xl">
+        <p class="font-body font-medium text-base max-w-2xl">
           ${project.desc}
         </p>
       </div>
