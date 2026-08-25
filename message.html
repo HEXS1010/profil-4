@@ -1,34 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Message</title>
     <link rel="icon" type="image/png" href="/src/assets/img/logo.png" />
 
     <link href="/src/style.css" rel="stylesheet" />
-</head>
-<body class="bg-background min-h-screen flex flex-col">
+  </head>
+  <body class="bg-background min-h-screen flex flex-col">
     <header>
-        <navbar-com></navbar-com>
-        <sidebar-com></sidebar-com>
+      <navbar-com></navbar-com>
+      <sidebar-com></sidebar-com>
     </header>
 
-    <main class="flex-1">
-        <section>
-            <div class="max-w-7xl max-auto">
-                <img src="" alt="">
-                <div>
-                    <form action=""></form>
-                </div>
-            </div>
-        </section>
-    </main>
+    <main class="flex-1 pt-20">
+      <!-- hero -->
+      <section class="grid-bg bg-white border-b-3">
+        <div class="max-w-7xl mx-auto py-20">
+          <breadcrumb-com></breadcrumb-com>
+          <div class="flex flex-col gap-7">
+            <h1 class="font-title font-bold text-xl md:text-5xl">
+              <i class="fa-solid fa-message"></i> Apa bila ada kendala hubungi saya.
+            </h1>
+            <p class="font-body font-medium text-base max-w-7xl">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non quae
+              consequatur odit. Reiciendis illum pariatur labore commodi
+              explicabo porro neque!
+            </p>
+          </div>
+        </div>
+      </section>
 
+      <!-- form -->
+      <section class="max-w-5xl mx-auto px-5 py-20">
+        <div
+          class="bg-white border-3 border-black shadow-[6px_6px_0] flex items-stretch"
+        >
+          <div
+            class="w-1/3 bg-sidebar border-r-3 border-black flex items-center justify-center"
+          >
+            <img
+              src="/src/assets/img/karakter/img-message.png"
+              alt="Ilustrasi"
+              class="max-h-full object-contain"
+            />
+          </div>
+
+          <div class="w-2/3 p-8">
+            <h2 class="font-title font-bold text-3xl mb-6">Kirim Pesan</h2>
+            <form class="flex flex-col gap-4">
+              <div class="flex flex-col gap-1">
+                <label for="name" class="font-label font-bold text-sm"
+                  >Nama</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="border-2 border-black p-2 font-body focus:outline-none focus:shadow-[2px_2px_0] transition"
+                />
+              </div>
+              <div class="flex flex-col gap-1">
+                <label for="email" class="font-label font-bold text-sm"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="border-2 border-black p-2 font-body focus:outline-none focus:shadow-[2px_2px_0] transition"
+                />
+              </div>
+              <div class="flex flex-col gap-1">
+                <label for="subject" class="font-label font-bold text-sm"
+                  >Tujuan</label
+                >
+                <select
+                  id="subject"
+                  name="subject"
+                  class="border-2 border-black p-2 font-body bg-white focus:outline-none focus:shadow-[2px_2px_0] transition"
+                >
+                  <option value="kolaborasi">Kolaborasi</option>
+                  <option value="projek">Projek</option>
+                  <option value="pertanyaan">Pertanyaan</option>
+                  <option value="lainnya">Lainnya</option>
+                </select>
+              </div>
+              <div class="flex flex-col gap-1">
+                <label for="message" class="font-label font-bold text-sm"
+                  >Penjelasan</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="3"
+                  required
+                  class="border-2 border-black p-2 font-body focus:outline-none focus:shadow-[2px_2px_0] transition"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="bg-sidebar border-3 border-black p-2 font-label font-bold shadow-[3px_3px_0] hover:shadow-none hover:translate-x-0.75 hover:translate-y-0.75 transition-all w-full"
+              >
+                Kirim Pesan <i class="fa-solid fa-paper-plane ml-2"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- footer -->
     <footer-com></footer-com>
 
     <script type="module" src="/src/main.js"></script>
-</body>
+  </body>
 </html>
