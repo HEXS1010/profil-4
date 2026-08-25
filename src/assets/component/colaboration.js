@@ -60,7 +60,7 @@ class colaboration extends HTMLElement {
 
             <!-- tombol -->
             <a
-              href=""
+              href="message.html"
               class="font-label font-medium text-base px-6 py-2 bg-nav-bg border-3 shadow-[4px_4px_0] transition-all duration-300 hover:translate-x-1 hover:translate-y-1 hover:shadow-[0_0_0]"
               >Kirim Pesan <i class="fa-solid fa-arrow-right"></i
             ></a>

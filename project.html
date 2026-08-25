@@ -4,16 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project</title>
+    <link rel="icon" type="image/png" href="/src/assets/img/logo.png" />
 
     <link href="/src/style.css" rel="stylesheet" />
   </head>
-  <body class="bg-background">
+  <body class="bg-background min-h-screen flex flex-col">
     <header>
       <navbar-com></navbar-com>
       <sidebar-com></sidebar-com>
     </header>
 
-    <main class="pt-20">
+    <main class="pt-20 flex-1">
       <section class="grid-bg bg-white border-b-4">
         <div class="max-w-7xl mx-auto py-20 px-5">
           <breadcrumb-com></breadcrumb-com>
@@ -29,15 +30,20 @@
           </div>
 
           <div class="flex gap-5 mt-10">
-            <span class="bg-nav-bg px-5 py-2 font-label font-medium text-base border-3 shadow-[2px_2px_0]"><i class="fa-solid fa-code"></i> Webside</span>
-            <span class="bg-sidebar px-5 py-2 font-label font-medium text-base border-3 shadow-[2px_2px_0]"><i class="fa-solid fa-palette"></i> UI/UX Disain</span>
+            <span
+              class="bg-nav-bg px-5 py-2 font-label font-medium text-base border-3 shadow-[2px_2px_0]"
+              ><i class="fa-solid fa-code"></i> Webside</span
+            >
+            <span
+              class="bg-sidebar px-5 py-2 font-label font-medium text-base border-3 shadow-[2px_2px_0]"
+              ><i class="fa-solid fa-palette"></i> UI/UX Disain</span
+            >
           </div>
         </div>
       </section>
 
       <section class="py-20">
         <div class="max-w-7xl mx-auto">
-
           <card-project></card-project>
           <pagination-com current="1" total="3"></pagination-com>
         </div>
