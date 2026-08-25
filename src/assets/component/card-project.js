@@ -70,7 +70,7 @@ class cardProject extends HTMLElement {
   skeleton() {
     const placeholder = `
       <div
-        class="flex flex-col gap-4 bg-white border-3 shadow-[3px_3px_0] p-4 h-[26rem] animate-pulse"
+        class="flex flex-col gap-4 bg-white border-3 shadow-[3px_3px_0] p-4 h-104 animate-pulse"
       >
         <div class="bg-gray-200 border-2 aspect-video"></div>
         <div class="bg-gray-200 border-2 h-6 w-24"></div>

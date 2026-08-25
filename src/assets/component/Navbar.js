@@ -5,7 +5,7 @@ class Navbar extends HTMLElement {
         <div class="mx-auto w-full h-full max-w-7xl px-6">
           <div class="flex justify-between items-center h-full">
             <div>
-              <img class="w-15 h-15" src="src/assets/img/logo.png" alt="Logo" />
+              <img class="w-15 h-15" src="/src/assets/img/logo/logo.png" alt="Logo" />
             </div>
 
             <ul
