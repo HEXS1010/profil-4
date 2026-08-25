@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About-me</title>
+    <link rel="icon" type="image/png" href="/src/assets/img/logo.png" />
+
+    <link href="/src/style.css" rel="stylesheet" />
+  </head>
+  <body class="bg-background min-h-screen flex flex-col">
+    <header>
+      <navbar-com></navbar-com>
+      <sidebar-com></sidebar-com>
+    </header>
+
+    <main class="flex-1 pt-20">
+      <section class="grid-bg bg-white py-20">
+        <div class="max-w-7xl mx-auto">
+          <breadcrumb-com></breadcrumb-com>
+          <div class="flex flex-col gap-7">
+            <h1 class="font-title font-bold text-xl md:text-5xl">
+              <i class="fa-solid fa-circle-user"></i> Cerita di Balik Layar
+            </h1>
+            <p class="font-body font-medium text-base max-w-2xl">
+              Dari sekadar rasa penasaran jadi passion. Ini perjalanan saya di
+              dunia development, lengkap dengan skill, pengalaman, dan hal-hal
+              yang saya percaya.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- kolaborasi -->
+      <colaboration-com></colaboration-com>
+    </main>
+
+    <!-- footer -->
+    <footer-com></footer-com>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -96,6 +96,12 @@ class Breadcrumb extends HTMLElement {
               icon: icon,
             });
           }
+        } else if (filename.toLowerCase().includes("about-me")) {
+          paths.push({
+            name: "Tentang Saya",
+            url: filename,
+            icon: "fa-solid fa-circle-user",
+          });
         } else {
           // General fallback for other future pages (e.g., about.html, skills.html)
           const cleanName = filename.replace(".html", "");
