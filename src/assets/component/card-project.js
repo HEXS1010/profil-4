@@ -41,7 +41,7 @@ class cardProject extends HTMLElement {
             ${project.category}
           </span>
 
-          <tooltip-com label="Tanggal upload">${project.date}</tooltip-com>
+          <tooltip-com label="Tanggal upload" no-style class="font-label font-medium text-sm shadow-[2px_2px_0] bg-sidebar border-2 px-3 py-1">${project.date}</tooltip-com>
         </div>
 
         <h4 class="font-title font-bold text-2xl">${project.title}</h4>

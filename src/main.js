@@ -1,5 +1,6 @@
 import "./style.css";
 import "./assets/font-awesome/css/all.min.css";
+import "./assets/component/Tooltip.js";
 
 // Lazy loading components
 const loadComponent = (selector, path) => {
@@ -10,7 +11,6 @@ const loadComponent = (selector, path) => {
 
 loadComponent("navbar-com", "./assets/component/Navbar.js");
 loadComponent("sidebar-com", "./assets/component/SideBar.js");
-loadComponent("tooltip-com", "./assets/component/Tooltip.js");
 loadComponent("breadcrumb-com", "./assets/component/Breadcrumb.js");
 loadComponent("pagination-com", "./assets/component/Pagination.js");
 loadComponent("github-com", "./assets/component/Github.js");
