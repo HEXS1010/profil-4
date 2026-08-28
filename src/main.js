@@ -1,16 +1,25 @@
 import "./style.css";
 import "./assets/font-awesome/css/all.min.css";
-import "./assets/component/Navbar.js";
-import "./assets/component/SideBar.js";
-import "./assets/component/Tooltip.js";
-import "./assets/component/Breadcrumb.js";
-import "./assets/component/Pagination.js";
-import "./assets/component/Github.js";
-import "./assets/component/Footer.js";
-import "./assets/component/card-project.js";
-import "./assets/component/detail-header.js";
-import "./assets/component/detail-body.js";
-import "./assets/component/colaboration.js";
+
+// Lazy loading components
+const loadComponent = (selector, path) => {
+  if (document.querySelector(selector)) {
+    import(/* @vite-ignore */ path);
+  }
+};
+
+loadComponent("navbar-com", "./assets/component/Navbar.js");
+loadComponent("sidebar-com", "./assets/component/SideBar.js");
+loadComponent("tooltip-com", "./assets/component/Tooltip.js");
+loadComponent("breadcrumb-com", "./assets/component/Breadcrumb.js");
+loadComponent("pagination-com", "./assets/component/Pagination.js");
+loadComponent("github-com", "./assets/component/Github.js");
+loadComponent("footer-com", "./assets/component/Footer.js");
+loadComponent("card-project", "./assets/component/card-project.js");
+loadComponent("detail-header-com", "./assets/component/detail-header.js");
+loadComponent("detail-body-com", "./assets/component/detail-body.js");
+loadComponent("colaboration-com", "./assets/component/colaboration.js");
+
 import { initDotGrid } from "./assets/dot-grid.js";
 // import { initLogoSlider } from "./assets/logo-slider.js";
 
