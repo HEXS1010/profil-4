@@ -199,6 +199,7 @@
 
 .card {
   flex: 0 0 3em;
+  /* height: 6.5rem; */
   height: 7.5rem;
   /* padding: 1em; */
   /* background: white; */
@@ -236,6 +237,8 @@
 }
 
 .card img {
+  /* width: 45px; */
+  /* height: 40px; */
   margin-block: auto;
   filter: grayscale(100%) opacity(0.4);
   transition: filter 0.3s ease;
@@ -243,6 +246,24 @@
 
 .card:hover img {
   filter: grayscale(0%) opacity(1);
+}
+
+/* ukuran HP (phone): nilai diatas dianggap ukuran tablet/desktop */
+@media (max-width: 767.98px) {
+  .loop {
+    height: 110px;
+  }
+
+  .card {
+    flex: 0 0 2.2em;
+    height: 5.9rem;
+    /* font-size: 1rem; */
+  }
+
+  .card img {
+    width: 2.5rem;
+    /* height: 2.5rem; */
+  }
 }
 
 @keyframes spin_scroll {
@@ -253,6 +274,8 @@
     translate: -100%;
   }
 }
+
+
 
 /* .nav-link {
   border: 2px solid transparent;
