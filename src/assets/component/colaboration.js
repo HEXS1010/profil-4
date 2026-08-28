@@ -1,8 +1,12 @@
 class colaboration extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <section class="border-t-3">
-        <div class="max-w-5xl mx-auto py-20 px-5">
+      <section class="border-t-3 relative">
+        <div class="max-w-5xl mx-auto py-20 px-10">
+        <div>
+        <img class="hero-icon absolute w-40 top-[20%] left-[5%] z-[-1] rotate-50" src="src/assets/img/com/com-6.png" alt="icon" style="animation-delay: 0.8s">
+        <img class="hero-icon absolute w-50 bottom-[20%] right-[0%] z-[-1]" src="src/assets/img/com/com-7.png" alt="icon">
+        </div>
           <div
             class="py-10 px-20 bg-sidebar border-3 shadow-[4px_4px_0] flex justify-between items-center -rotate-1 transition-all duration-400 hover:rotate-0"
           >
