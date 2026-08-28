@@ -10,22 +10,22 @@ class colaboration extends HTMLElement {
           <div
             class="px-5 py-5 md:py-10 md:px-20 bg-sidebar border-3 shadow-[4px_4px_0] flex flex-col justify-center md:flex-row md:justify-between items-center -rotate-1 transition-all duration-400 hover:rotate-0"
           >
-            <div class="flex flex-col justify-center items-center gap-5">
+            <div class="flex flex-col justify-center items-center md:justify-start gap-5">
               <span
                 class="flex items-center gap-2 w-fit text-sm font-label font-medium bg-nav-bg px-3 py-1 border-2 shadow-[2px_2px_0]"
                 ><i class="fa-solid fa-code-branch"></i> Kolaborasi</span
               >
-              <h5 class="font-title font-bold text-xl text-center md:left md:text-4xl ">
+              <h5 class="font-title font-bold text-xl text-center md:text-left sm:text-4xl">
                 Punya Projek Menarik? <br />
                 Mari Kolaborasi!
               </h5>
-              <p class="font-label font-medium text-sm text-center md:text-left md:text-base">
+              <p class="font-label font-medium text-sm text-center md:text-left sm:text-base">
                 Saya selalu terbuka untuk berkolaborasi, <br />
                 seputar mendisain website.
               </p>
 
-              <div class="flex flex-col gap-5 justify-center mt-1 text-center md:text-left">
-                <p class="font-label font-normal text-black text-sm md:text-base">
+              <div class="flex flex-col gap-5 justify-center md:justify-start mt-1 text-center md:text-left">
+                <p class="font-label font-normal text-black text-sm sm:text-base">
                   Bisa juga lewat:
                 </p>
 
