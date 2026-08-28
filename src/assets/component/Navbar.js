@@ -22,9 +22,6 @@ class Navbar extends HTMLElement {
                 <a href="Project.html" class="nav-link focus:outline-none focus:ring-0">Projek</a>
               </li>
               <li class="h-full">
-                <a href="#" class="nav-link focus:outline-none focus:ring-0">Skill</a>
-              </li>
-              <li class="h-full">
                 <a href="message.html" class="nav-link focus:outline-none focus:ring-0">Kontak</a>
               </li>
             </ul>
