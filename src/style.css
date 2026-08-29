@@ -345,16 +345,16 @@
 
 
 .hero-icon {
-  animation: float 4s ease-in-out infinite;
+  animation: float 2s ease-in-out infinite;
 }
 
 @keyframes float {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateY(0) rotate(-2deg);
   }
   50% {
-    transform: translateY(-8px);
+    transform: translateY(-16px) rotate(2deg);
   }
 }
 
