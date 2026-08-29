@@ -26,10 +26,8 @@ class Footer extends HTMLElement {
               class="flex flex-col items-center justify-center gap-6 border-y-3 md:border-y-0 md:border-x-3 border-gray-600 col-span-1 md:col-span-2 py-8 md:py-0"
             >
               <img class="w-25 h-25" src="/src/assets/img/logo/logo.png" alt="Logo" />
-              <p class="font-body font-medium text-sm text-center px-4 md:px-20">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni
-                cumque harum ex accusamus, culpa quas quibusdam. Non nostrum ea
-                porro.
+              <p class="font-body font-medium text-base text-center px-4 md:px-20">
+                Terima kasih sudah mampir. Jangan ragu menyapa setiap obrolan bisa jadi awal kolaborasi baru.
               </p>
 
               <div class="flex flex-wrap gap-4 justify-center">
