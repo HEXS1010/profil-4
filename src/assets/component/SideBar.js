@@ -3,19 +3,13 @@ class Sidebar extends HTMLElement {
     this.innerHTML = `
       <div id="sidebar-overlay" class="fixed inset-0 bg-black/50 z-99 opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out"></div>
       <aside
-        class="fixed right-0 top-0 h-screen w-64 bg-background border-l-2 z-100 translate-x-full transition-all duration-500 ease-in-out"
+        class="fixed right-0 top-0 h-dvh w-64 bg-background border-l-5 z-100 translate-x-full transition-all duration-500 ease-in-out "
       >
-        <div class="flex flex-col h-full p-6">
+        <div class="flex flex-col h-full ">
 
-          <div class="flex justify-between items-center mb-8">
+          <div class="flex justify-between items-center py-5 px-5">
             <div>
-              <p class="font-label text-xs uppercase tracking-widest text-gray-400">
-                Menu
-              </p>
-
-              <p class="font-title font-bold text-xl mt-2">
-                Portfolio
-              </p>
+              <img class="w-18" src="src/assets/img/logo/logo.png" alt="logo">
             </div>
 
             <button id="sidebar-close" type="button" class="text-2xl w-10 h-10 flex items-center justify-center rounded-full bg-sidebar shadow-[2px_2px_0] border-2 hover:rotate-90 transition-all duration-200" aria-label="Tutup sidebar">
@@ -24,62 +18,62 @@ class Sidebar extends HTMLElement {
           </div>
 
           <nav>
-            <ul class="flex flex-col gap-2 font-label">
+            <ul class="flex flex-col font-label">
 
-              <li>
+              <li class="border-t-3">
                 <a
                   href="#beranda"
                   class="sidebar-link active flex items-center gap-3
                          px-4 py-3 rounded-lg
-                         transition-all duration-200"
+                         transition-all duration-200 text-lg"
                 >
                   <i class="fa-solid fa-house w-5 text-center"></i>
                   <span>Beranda</span>
                 </a>
               </li>
 
-              <li>
+              <li class="border-t-3">
                 <a
                   href="#tentang"
                   class="sidebar-link flex items-center gap-3
                          px-4 py-3 rounded-lg
-                         transition-all duration-200"
+                         transition-all duration-200 text-lg"
                 >
                   <i class="fa-solid fa-user w-5 text-center"></i>
                   <span>Tentang Saya</span>
                 </a>
               </li>
 
-              <li>
+              <li class="border-t-3">
                 <a
                   href="#projek"
                   class="sidebar-link flex items-center gap-3
                          px-4 py-3 rounded-lg
-                         transition-all duration-200"
+                         transition-all duration-200 text-lg"
                 >
                   <i class="fa-solid fa-diagram-project w-5 text-center"></i>
                   <span>Projek</span>
                 </a>
               </li>
 
-              <li>
+              <li class="border-t-3">
                 <a
                   href="#skill"
                   class="sidebar-link flex items-center gap-3
                          px-4 py-3 rounded-lg
-                         transition-all duration-200"
+                         transition-all duration-200 text-lg"
                 >
                   <i class="fa-solid fa-code w-5 text-center"></i>
                   <span>Skill</span>
                 </a>
               </li>
 
-              <li>
+              <li class="border-t-3 border-b-3">
                 <a
                   href="#kontak"
                   class="sidebar-link flex items-center gap-3
                          px-4 py-3 rounded-lg
-                         transition-all duration-200"
+                         transition-all duration-200 text-lg"
                 >
                   <i class="fa-solid fa-envelope w-5 text-center"></i>
                   <span>Kontak</span>
@@ -91,7 +85,7 @@ class Sidebar extends HTMLElement {
 
           <!-- Social Media -->
           <div class="mt-auto pt-6 border-t">
-            <div class="flex gap-4">
+            <div class="flex justify-center items-center gap-4">
               <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-sidebar shadow-[2px_2px_0] border-2 hover:scale-110 transition-all duration-200" aria-label="GitHub">
                 <i class="fa-brands fa-github"></i>
               </a>
