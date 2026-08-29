@@ -35,28 +35,28 @@ class Footer extends HTMLElement {
               <div class="flex flex-wrap gap-4 justify-center">
                 <tooltip-com label="Instagram" no-style>
                   <div
-                    class="bg-merah border-3 text-2xl shadow-[3px_3px_0] p-2 transition-all duration-300 hover:translate-x-0.75 hover:translate-y-0.75 hover:shadow-[0_0_0]"
+                    class="bg-merah border-3 text-lg md:text-2xl shadow-[3px_3px_0] px-3 py-2 md:p-2 transition-all duration-300 hover:translate-x-0.75 hover:translate-y-0.75 hover:shadow-[0_0_0]"
                   >
                     <i class="fa-brands fa-instagram"></i>
                   </div>
                 </tooltip-com>
                 <tooltip-com label="LinkedIn" no-style>
                   <div
-                    class="bg-biru border-3 text-2xl shadow-[3px_3px_0] p-2 transition-all duration-300 hover:translate-x-0.75 hover:translate-y-0.75 hover:shadow-[0_0_0]"
+                    class="bg-biru border-3 text-lg md:text-2xl shadow-[3px_3px_0] px-3 py-2 md:p-2 transition-all duration-300 hover:translate-x-0.75 hover:translate-y-0.75 hover:shadow-[0_0_0]"
                   >
                     <i class="fa-brands fa-linkedin-in"></i>
                   </div>
                 </tooltip-com>
                 <tooltip-com label="Facebook" no-style>
                   <div
-                    class="bg-oren border-3 text-2xl shadow-[3px_3px_0] p-2 transition-all duration-300 hover:translate-x-0.75 hover:translate-y-0.75 hover:shadow-[0_0_0]"
+                    class="bg-oren border-3 text-lg md:text-2xl shadow-[3px_3px_0] px-3 py-2 md:p-2 transition-all duration-300 hover:translate-x-0.75 hover:translate-y-0.75 hover:shadow-[0_0_0]"
                   >
                     <i class="fa-brands fa-facebook"></i>
                   </div>
                 </tooltip-com>
                 <tooltip-com label="WhatsApp" no-style>
                   <div
-                    class="bg-nav-bg border-3 text-2xl shadow-[3px_3px_0] p-2 transition-all duration-300 hover:translate-x-0.75 hover:translate-y-0.75 hover:shadow-[0_0_0]"
+                    class="bg-nav-bg border-3 text-lg md:text-2xl shadow-[3px_3px_0] px-3 py-2 md:p-2 transition-all duration-300 hover:translate-x-0.75 hover:translate-y-0.75 hover:shadow-[0_0_0]"
                   >
                     <i class="fa-brands fa-whatsapp"></i>
                   </div>
