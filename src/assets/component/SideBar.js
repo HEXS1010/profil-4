@@ -22,7 +22,7 @@ class Sidebar extends HTMLElement {
 
               <li class="border-t-3">
                 <a
-                  href="#beranda"
+                  href="index.html"
                   class="sidebar-link active flex items-center gap-3
                          px-4 py-3 rounded-lg
                          transition-all duration-200 text-lg"
@@ -34,7 +34,7 @@ class Sidebar extends HTMLElement {
 
               <li class="border-t-3">
                 <a
-                  href="#tentang"
+                  href="about-me.html"
                   class="sidebar-link flex items-center gap-3
                          px-4 py-3 rounded-lg
                          transition-all duration-200 text-lg"
@@ -46,7 +46,7 @@ class Sidebar extends HTMLElement {
 
               <li class="border-t-3">
                 <a
-                  href="#projek"
+                  href="project.html"
                   class="sidebar-link flex items-center gap-3
                          px-4 py-3 rounded-lg
                          transition-all duration-200 text-lg"
@@ -56,21 +56,9 @@ class Sidebar extends HTMLElement {
                 </a>
               </li>
 
-              <li class="border-t-3">
-                <a
-                  href="#skill"
-                  class="sidebar-link flex items-center gap-3
-                         px-4 py-3 rounded-lg
-                         transition-all duration-200 text-lg"
-                >
-                  <i class="fa-solid fa-code w-5 text-center"></i>
-                  <span>Skill</span>
-                </a>
-              </li>
-
               <li class="border-t-3 border-b-3">
                 <a
-                  href="#kontak"
+                  href="message.html"
                   class="sidebar-link flex items-center gap-3
                          px-4 py-3 rounded-lg
                          transition-all duration-200 text-lg"
