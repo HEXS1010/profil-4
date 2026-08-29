@@ -2,8 +2,8 @@ class Sidebar extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <div id="sidebar-overlay" class="fixed inset-0 bg-black/50 z-99 opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out"></div>
-      <aside
-        class="fixed right-0 top-0 h-dvh w-64 bg-background border-l-5 z-100 translate-x-full transition-all duration-500 ease-in-out "
+<aside
+        class="fixed right-0 top-0 h-dvh w-64 bg-background border-l-2 z-100 translate-x-full transition-all duration-500 ease-in-out"
       >
         <div class="flex flex-col h-full ">
 
@@ -84,7 +84,7 @@ class Sidebar extends HTMLElement {
           </nav>
 
           <!-- Social Media -->
-          <div class="mt-auto pt-6 border-t">
+          <div class="mt-auto pt-6 border-t mb-3">
             <div class="flex justify-center items-center gap-4">
               <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-sidebar shadow-[2px_2px_0] border-2 hover:scale-110 transition-all duration-200" aria-label="GitHub">
                 <i class="fa-brands fa-github"></i>
