@@ -126,6 +126,10 @@ class Sidebar extends HTMLElement {
       sidebar.classList.toggle("shadow-2xl");
       overlay.classList.toggle("opacity-0");
       overlay.classList.toggle("pointer-events-none");
+
+      // Kunci scroll halaman saat sidebar terbuka
+      const isOpen = !sidebar.classList.contains("translate-x-full");
+      document.body.style.overflow = isOpen ? "hidden" : "";
     };
 
     document.addEventListener("toggle-sidebar", toggleSidebar);
