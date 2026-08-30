@@ -35,10 +35,10 @@
       <!-- form -->
       <section class="max-w-5xl mx-auto px-5 py-20">
         <div
-          class="bg-nav-bg border-3 border-black shadow-[6px_6px_0] flex items-stretch"
+          class="bg-nav-bg border-3 border-black shadow-[6px_6px_0] flex flex-col-reverse md:flex-row items-stretch"
         >
           <div
-            class="w-1/3 bg-sidebar border-r-3 border-black flex items-center justify-center"
+            class="md:w-1/3 bg-white-orange border-t-3 md:border-r-3 border-black flex items-center justify-center"
           >
             <img
               src="/src/assets/img/karakter/img-message.png"
@@ -47,7 +47,7 @@
             />
           </div>
 
-          <div class="w-2/3 p-8">
+          <div class=" md:w-2/3 px-3 py-8">
             <h2 class="font-title font-bold text-3xl mb-6">Kirim Pesan</h2>
             <form class="flex flex-col gap-4">
               <div class="flex flex-col gap-1">
@@ -104,13 +104,13 @@
               <div class="flex gap-4">
                 <button
                   type="submit"
-                  class="bg-sidebar border-3 border-black px-6 py-2 font-label font-bold shadow-[3px_3px_0] hover:shadow-none hover:translate-x-0.75 hover:translate-y-0.75 transition-all w-fit"
+                  class="bg-sidebar border-3 border-black px-3 py-2 md:px-6 md:py-2 font-label font-bold text-sm md:text-base shadow-[3px_3px_0] hover:shadow-none hover:translate-x-0.75 hover:translate-y-0.75 transition-all w-fit"
                 >
                   Kirim Pesan <i class="fa-solid fa-paper-plane ml-2"></i>
                 </button>
                 <button
                   type="reset"
-                  class="bg-gray-200 border-3 border-black px-5 py-2 font-label font-medium w-fit"
+                  class="bg-gray-200 border-3 border-black px-3 py-2 md:px-5 md:py-2 font-label font-medium w-fit"
                 >
                   Reset <i class="fa-solid fa-arrow-rotate-left"></i>
                 </button>
