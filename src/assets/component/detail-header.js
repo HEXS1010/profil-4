@@ -17,7 +17,7 @@ class DetailHeader extends HTMLElement {
     }
 
     const linkClass =
-      "inline-flex items-center gap-3 font-label font-medium border-3 shadow-[2px_2px_0] px-5 py-2 transition-all duration-300 hover:translate-x-1 hover:translate-y-1 hover:shadow-[0_0_0]";
+      "inline-flex items-center gap-3 font-label font-medium text-xs md:text-sm border-3 shadow-[2px_2px_0] px-5 py-2 transition-all duration-300 hover:translate-x-1 hover:translate-y-1 hover:shadow-[0_0_0]";
 
     const links = [];
 
@@ -38,21 +38,21 @@ class DetailHeader extends HTMLElement {
     document.title = `${project.title} · Projek`;
     this.innerHTML = `
       <div class="flex flex-col gap-7">
-        <h1 class="font-title font-bold text-xl md:text-5xl">
+        <h1 class="font-title font-bold text-3xl md:text-5xl">
           <i class="fa-solid fa-folder"></i> ${project.title}
         </h1>
-        <p class="font-body font-medium text-base max-w-2xl">
+        <p class="font-body font-medium text-sm md:text-base max-w-2xl">
           ${project.desc}
         </p>
       </div>
 
       <div class="flex flex-wrap items-center gap-5 mt-10">
         <span
-          class="${categoryColor(project.category)} px-5 py-2 font-label font-medium text-base border-3 shadow-[2px_2px_0]"
+          class="${categoryColor(project.category)} px-5 py-2 font-label font-medium text-xs md:text-base border-3 shadow-[2px_2px_0]"
           ><i class="fa-solid fa-code"></i> ${project.category}</span
         >
         <span
-          class="bg-sidebar px-5 py-2 font-label font-medium text-base border-3 shadow-[2px_2px_0]"
+          class="bg-sidebar px-5 py-2 font-label font-medium text-xs md:text-base border-3 shadow-[2px_2px_0]"
           ><i class="fa-regular fa-calendar"></i> ${project.date}</span
         >
         ${
@@ -74,7 +74,7 @@ class DetailHeader extends HTMLElement {
           { name: "Projek", url: "project.html", icon: "fa-solid fa-folder" },
           { name: project.title, icon: "fa-solid fa-code" },
         ],
-      })
+      }),
     );
   }
 
