@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Admin · HEXS</title>
+    <title>Login Admin</title>
     <link rel="icon" type="image/png" href="/src/assets/img/logo.png" />
 
     <!-- css -->
@@ -28,7 +28,7 @@
                     alt="Logo HEXS"
                   />
                   <h1 class="font-title font-bold text-2xl text-center">
-                    Masuk Admin
+                    Akses Dashboard
                   </h1>
                   <p
                     class="font-body font-medium text-sm text-center text-slate-600"
@@ -113,15 +113,97 @@
         </div>
       </section>
 
-      <section id="dashboard-view" class="hidden"></section>
+      <!-- dahsboard -->
+      <section id="dashboard-view" class="hidden grow-screen bg-background">
+          <!-- <header class="bg-white border-b-4 sticky top-0 z-10">
+            <div
+              class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
+            >
+              <div class="flex items-center gap-4">
+                <img
+                  class="w-13 h-13"
+                  src="/src/assets/img/logo/logo.png"
+                  alt="Logo HEXS"
+                />
+                <span class="font-title font-bold text-xl md:text-2xl"
+                  >Dashboard</span
+                >
+              </div>
+              <button
+                id="logout-btn"
+                class="flex items-center gap-2 bg-merah border-2 border-black font-label font-medium text-xs md:text-sm px-4 py-2 shadow-[2px_2px_0] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all duration-200"
+              >
+                Logout <i class="fa-solid fa-arrow-right-from-bracket"></i>
+              </button>
+            </div>
+          </header> -->
+
+        <div class="grid grid-cols-[250px_1fr]" >
+            <aside class="bg-yellow-300 h-dvh">
+                <h2>halo</h2>
+            </aside>
+
+            <!-- main -->
+            <div class="max-w-7xl mx-auto px-6 py-10">
+              <div
+                class="bg-white border-3 border-black shadow-[4px_4px_0] p-8 text-center"
+              >
+                <i class="fa-solid fa-circle-check text-4xl text-green-600"></i>
+                <h2 class="font-title font-bold text-2xl mt-4">
+                  Login Berhasil!
+                </h2>
+                <p class="font-body font-medium text-sm text-slate-600 mt-2">
+                  Ini kerangka dashboard. Isi kontennya (tabel projek, tambah,
+                  edit, hapus) menyusul di sini.
+                </p>
+              </div>
+            </div>
+        </div>
+
+      </section>
     </main>
 
     <script type="module">
-      document.addEventListener("DOMContentLoaded", () => {
-        const form = document.getElementById("login-form");
-        form.addEventListener("submit", (e) => {
-          e.preventDefault();
-        });
+      const loginView = document.getElementById("login-view");
+      const dashboardView = document.getElementById("dashboard-view");
+      const loginForm = document.getElementById("login-form");
+      const loginError = document.getElementById("login-error");
+      const logoutBtn = document.getElementById("logout-btn");
+
+      const ADMIN_USERNAME = "admin";
+      const ADMIN_PASSWORD = "admin";
+      const AUTH_KEY = "admin-login";
+
+      const showDashboard = () => {
+        loginView.classList.add("hidden");
+        dashboardView.classList.remove("hidden");
+      };
+
+      const showLogin = () => {
+        dashboardView.classList.add("hidden");
+        loginView.classList.remove("hidden");
+      };
+
+      if (sessionStorage.getItem(AUTH_KEY) === "1") {
+        showDashboard();
+      }
+
+      loginForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const username = loginForm.username.value.trim();
+        const password = loginForm.password.value;
+
+        if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
+          sessionStorage.setItem(AUTH_KEY, "1");
+          showDashboard();
+        } else {
+          loginError.classList.remove("hidden");
+        }
+      });
+
+      logoutBtn.addEventListener("click", () => {
+        sessionStorage.removeItem(AUTH_KEY);
+        showLogin();
       });
     </script>
   </body>
