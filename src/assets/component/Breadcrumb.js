@@ -118,7 +118,7 @@ class Breadcrumb extends HTMLElement {
 
     // Render HTML with Neo-Brutalist design: border-2, black outline, flat shadow, font-label
     let htmlContent = `
-      <nav aria-label="Breadcrumb" class="flex flex-wrap items-center gap-2 md:gap-3 text-sm font-label mb-6">
+      <nav aria-label="Breadcrumb" class="flex flex-wrap items-center text-xs md:text-base gap-2 md:gap-3 font-label mb-6">
     `;
 
     paths.forEach((path, index) => {
