@@ -70,16 +70,16 @@ class Footer extends HTMLElement {
                   <a href="index.html"> Beranda </a>
                 </li>
                 <li class="font-label font-medium text-base">
-                  <a href="index.html#Tentang"> Tentang Saya </a>
+                  <a href="about-me.html"> Tentang Saya </a>
                 </li>
                 <li class="font-label font-medium text-base">
                   <a href="Project.html"> Projek </a>
                 </li>
                 <li class="font-label font-medium text-base">
-                  <a href="index.html#Skill"> Skill </a>
+                  <a href="#"> Skill </a>
                 </li>
                 <li class="font-label font-medium text-base">
-                  <a href="index.html#Kontak"> Kontak </a>
+                  <a href="message.html"> Kontak </a>
                 </li>
               </ul>
             </nav>
