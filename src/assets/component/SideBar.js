@@ -20,7 +20,7 @@ class Sidebar extends HTMLElement {
           <nav>
             <ul class="flex flex-col font-label">
 
-              <li class="border-t-3">
+              <li class="border-t-2">
                 <a
                   href="index.html"
                   class="sidebar-link active flex items-center gap-3
@@ -32,7 +32,7 @@ class Sidebar extends HTMLElement {
                 </a>
               </li>
 
-              <li class="border-t-3">
+              <li class="border-t-2">
                 <a
                   href="about-me.html"
                   class="sidebar-link flex items-center gap-3
@@ -44,7 +44,7 @@ class Sidebar extends HTMLElement {
                 </a>
               </li>
 
-              <li class="border-t-3">
+              <li class="border-t-2">
                 <a
                   href="project.html"
                   class="sidebar-link flex items-center gap-3
@@ -56,7 +56,7 @@ class Sidebar extends HTMLElement {
                 </a>
               </li>
 
-              <li class="border-t-3 border-b-3">
+              <li class="border-t-2 border-b-2">
                 <a
                   href="message.html"
                   class="sidebar-link flex items-center gap-3
