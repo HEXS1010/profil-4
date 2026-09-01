@@ -163,10 +163,19 @@
 
               <ul class="mt-10 flex flex-col gap-7 font-label font-medium">
                 <li class="transition-all duration-300 hover:pl-2">
-                  <a href=""><i class="fa-solid fa-house"></i> Dashboard</a>
+                  <a href="#" data-view="dashboard" class="sidebar-item active"
+                    ><i class="fa-solid fa-house"></i> Dashboard</a
+                  >
                 </li>
                 <li class="transition-all duration-300 hover:pl-2">
-                  <a href=""><i class="fa-solid fa-folder"></i> Projek</a>
+                  <a href="#" data-view="projek" class="sidebar-item"
+                    ><i class="fa-solid fa-folder"></i> Projek</a
+                  >
+                </li>
+                <li class="transition-all duration-300 hover:pl-2">
+                  <a href="#" data-view="pesan" class="sidebar-item"
+                    ><i class="fa-solid fa-envelope"></i> Pesan</a
+                  >
                 </li>
                 <li
                   id="logout-btn"
@@ -185,8 +194,8 @@
             class="[grid-area:header] w-full h-20 bg-white border-b-2 flex flex-col md:flex-row md:items-center justify-between gap-3 px-10 py-5"
           >
             <div>
-              <h1 class="font-title font-bold text-xl">Dashboard</h1>
-              <p class="font-body font-medium text-sm text-slate-600 mt-1">
+              <h1 id="view-title" class="font-title font-bold text-xl">Dashboard</h1>
+              <p id="view-desc" class="font-body font-medium text-sm text-slate-600 mt-1">
                 Ringkasan projek &amp; pesan portofoliomu dalam satu bento.
               </p>
             </div>
@@ -205,11 +214,13 @@
             </div>
           </header>
 
-          <!-- main -->
-          <div class="[grid-area:main] px-10 mt-10">
-            <div
-              class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 auto-rows-[minmax(100px,auto)] gap-4"
-            >
+          <!-- main: konten berganti antar view -->
+          <div class="[grid-area:main] px-10 mt-5">
+            <!-- ===== VIEW DASHBOARD ===== -->
+            <div id="view-dashboard">
+              <div
+                class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 auto-rows-[minmax(100px,auto)] gap-4"
+              >
               <!-- Jumlah Projek -->
               <div
                 class="bg-hijau-200 p-4 border-3 shadow-[8px_8px_0] col-span-1 row-span-1"
@@ -422,23 +433,59 @@
               </div>
             </div> -->
           </div>
-          <!-- <div class="max-w-7xl mx-auto px-6 py-10">
-            <div
-              class="bg-white border-3 border-black shadow-[4px_4px_0] p-8 text-center"
-            >
-              <i class="fa-solid fa-circle-check text-4xl text-green-600"></i>
-              <h2 class="font-title font-bold text-2xl mt-4">
-                Login Berhasil!
-              </h2>
-              <p class="font-body font-medium text-sm text-slate-600 mt-2">
-                Ini kerangka dashboard. Isi kontennya (tabel projek, tambah,
-                edit, hapus) menyusul di sini.
-              </p>
+          </div>
+
+          <!-- ===== VIEW PROJEK ===== -->
+          <div id="view-projek" class="hidden">
+            <div class="flex flex-col gap-5">
+              <div class="flex items-center justify-between gap-4 flex-wrap">
+                <div>
+                  <h2 class="font-title font-bold text-2xl">Kelola Projek</h2>
+                  <p class="font-body font-medium text-sm text-slate-600 mt-1">
+                    Tambah, edit, atau hapus projek portofoliomu.
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  class="inline-flex items-center gap-2 bg-sidebar border-2 border-black font-label font-bold text-sm px-4 py-2 shadow-[3px_3px_0] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all duration-200"
+                >
+                  <i class="fa-solid fa-plus"></i> Tambah Projek
+                </button>
+              </div>
+
+              <div class="bg-bro border-3 shadow-[5px_5px_0] p-6">
+                <h4 class="font-title font-semibold text-lg">halo</h4>
+                <p
+                  class="font-body font-medium text-sm text-slate-600 mt-2"
+                >
+                  UI daftar projek (tabel / kartu) bakalan kamu isi di sini.
+                </p>
+              </div>
             </div>
-          </div> -->
+          </div>
+
+          <!-- ===== VIEW PESAN ===== -->
+          <div id="view-pesan" class="hidden">
+            <div class="flex flex-col gap-5">
+              <div>
+                <h2 class="font-title font-bold text-2xl">Kelola Pesan</h2>
+                <p class="font-body font-medium text-sm text-slate-600 mt-1">
+                  Balas pesan masuk dan pantau statusnya (belum/sudah dibaca).
+                </p>
+              </div>
+
+              <div class="bg-bro border-3 shadow-[5px_5px_0] p-6">
+                <h4 class="font-title font-semibold text-lg">Belum ada UI</h4>
+                <p class="font-body font-medium text-sm text-slate-600 mt-2">
+                  UI pesan bakalan kamu isi di sini.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-    </main>
+
+      </main>
 
     <script type="module">
       const loginView = document.getElementById("login-view");
@@ -481,6 +528,51 @@
       logoutBtn.addEventListener("click", () => {
         sessionStorage.removeItem(AUTH_KEY);
         showLogin();
+      });
+
+      // ===== navigasi antar view (dashboard / projek / pesan) =====
+      const viewTitle = document.getElementById("view-title");
+      const viewDesc = document.getElementById("view-desc");
+
+      const views = {
+        dashboard: {
+          el: document.getElementById("view-dashboard"),
+          title: "Dashboard",
+          desc: "Ringkasan projek & pesan portofoliomu dalam satu bento.",
+        },
+        projek: {
+          el: document.getElementById("view-projek"),
+          title: "Projek",
+          desc: "Kelola projek portofoliomu: tambah, edit, hapus.",
+        },
+        pesan: {
+          el: document.getElementById("view-pesan"),
+          title: "Pesan",
+          desc: "Balas pesan masuk dan pantau statusnya.",
+        },
+      };
+
+      const showView = (name) => {
+        Object.entries(views).forEach(([key, view]) => {
+          view.el.classList.toggle("hidden", key !== name);
+        });
+
+        const current = views[name];
+        if (current) {
+          viewTitle.textContent = current.title;
+          viewDesc.textContent = current.desc;
+        }
+
+        document.querySelectorAll(".sidebar-item").forEach((link) => {
+          link.classList.toggle("active", link.dataset.view === name);
+        });
+      };
+
+      document.querySelectorAll(".sidebar-item").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          showView(link.dataset.view);
+        });
       });
     </script>
   </body>
