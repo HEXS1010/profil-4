@@ -155,13 +155,50 @@
   --font-label: "IBM Plex Mono", monospace;
 
   /* color */
+
+  /* hijau */
+  --color-hijau-50: #f3faf4;
+  --color-hijau-100: #e2f6e6;
+  --color-hijau-200: #c7ebce;
+  --color-nav-bg: #88d498; /* hijau soft */
+  --color-hijau-400: #67c17a;
+  --color-hijau-500: #42a557;
+  --color-hijau-600: #318844;
+  --color-hijau-700: #2a6b38;
+  --color-hijau-800: #255630;
+  --color-hijau-900: #20472a;
+  --color-hijau-950: #0d2614;
+
+  /* kuning */
+  --color-kuning-50: #fffbeb;
+  --color-kuning-100: #fff4c6;
+  --color-kuning-200: #ffe788;
+  --color-sidebar: #ffd23f; /* kuning soft */
+  --color-kuning-400: #ffc120;
+  --color-kuning-500: #f99f07;
+  --color-kuning-600: #dd7702;
+  --color-kuning-700: #b75306;
+  --color-kuning-800: #94400c;
+  --color-kuning-900: #7a340d;
+  --color-kuning-950: #461a02;
+
+  /* oren */
+  --color-oren-50: #fff8ed;
+  --color-oren-100: #ffeed4;
+  --color-oren-200: #ffd9a8;
+  --color-oren-300: #ffbe71;
+  --color-oren: #ffa552; /* oren soft */
+  --color-oren-500: #fe7911;
+  --color-oren-600: #ef5d07;
+  --color-oren-700: #c64508;
+  --color-oren-800: #9d370f;
+  --color-oren-900: #7e2f10;
+  --color-oren-950: #441506;
+
+
   /*--color-background: #F5F5F5;*/ /* putih cream gitu */
   --color-background: #fffcf5; /* putih cream gitu */
   --color-loop: #e8e4d4; /* putih kusam */
-  --color-nav-bg: #88d498; /* hijau soft */
-  --color-hijau-cool: #CBEBCA; /* hijau cool */
-  --color-sidebar: #ffd23f; /* kuning soft */
-  --color-oren: #ffa552; /* oren soft */
   --color-merah: #ff6b6b; /* merah soft */
   --color-merah-cool: #ffdbd1; /* merah cool */
   --color-ungu: #b8a9fa; /* ungu soft */
