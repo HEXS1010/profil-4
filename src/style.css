@@ -149,21 +149,21 @@
   font-display: swap;
 }
 
-
-
 @theme {
   --font-title: "Space Grotesk", sans-serif;
   --font-body: "DM Sans", sans-serif;
-  --font-label: "IBM Plex Mono", monospace;;
+  --font-label: "IBM Plex Mono", monospace;
 
   /* color */
   /*--color-background: #F5F5F5;*/ /* putih cream gitu */
-  --color-background: #FFFCF5; /* putih cream gitu */
+  --color-background: #fffcf5; /* putih cream gitu */
   --color-loop: #e8e4d4; /* putih kusam */
   --color-nav-bg: #88d498; /* hijau soft */
+  --color-hijau-cool: #CBEBCA; /* hijau cool */
   --color-sidebar: #ffd23f; /* kuning soft */
   --color-oren: #ffa552; /* oren soft */
   --color-merah: #ff6b6b; /* merah soft */
+  --color-merah-cool: #ffdbd1; /* merah cool */
   --color-ungu: #b8a9fa; /* ungu soft */
   --color-biru: #74b9ff; /* biru soft */
   --color-pink: #f7a8c4; /* pink soft */
@@ -274,8 +274,6 @@
   }
 }
 
-
-
 /* .nav-link {
   border: 2px solid transparent;
   padding: 0.5rem;
@@ -319,7 +317,6 @@
   margin-left: 0;
 }
 
-
 .nav-link:hover {
   background-color: var(--color-nav-bg);
   border-color: black;
@@ -341,7 +338,6 @@
   box-shadow: 0 0 0 #000;
   translate: 5px 5px;
 }
-
 
 .hero-icon {
   animation: float 2s ease-in-out infinite;
@@ -408,13 +404,12 @@
   box-shadow: 4px 4px 0 black;
 }
 
-
-
 .grow-screen {
   min-height: 100vh;
   min-height: 100dvh;
 }
 
-footer-com, navbar-com {
+footer-com,
+navbar-com {
   display: contents;
 }
