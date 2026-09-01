@@ -142,7 +142,11 @@
           <aside class="bg-white border-r-3 h-dvh">
             <div class="p-6">
               <div class="flex gap-4 justify-between items-center border-b-3">
-                <img class="w-[40%]" src="src/assets/img/logo/logo.png" alt="logo" />
+                <img
+                  class="w-[40%]"
+                  src="src/assets/img/logo/logo.png"
+                  alt="logo"
+                />
                 <button
                   id="sidebar-close"
                   type="button"
@@ -152,13 +156,12 @@
                   <i class="fa-solid fa-xmark"></i>
                 </button>
               </div>
-              <nav>
-                <ul>
-                  <li><a href=""></a>Dashboard</li>
-                  <li><a href=""></a>Projek</li>
-                  <li><a href=""></a>Logout</li>
-                </ul>
-              </nav>
+
+              <ul class="mt-10 flex flex-col gap-5 font-label font-medium">
+                <li><a href=""><i class="fa-solid fa-house"></i> Dashboard</a></li>
+                <li><a href="">Projek</a></li>
+                <li id="logout-btn"><a href=""><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+              </ul>
             </div>
           </aside>
 
