@@ -139,7 +139,7 @@
           </header> -->
 
         <div
-          class="grid grid-cols-[250px_1fr] grid-rows-[auto_1fr] [grid-template-areas:'sidebar_header'_'sidebar_main']"
+          class="grid grid-cols-[250px_1fr] grid-rows-[auto_1fr] [grid-template-areas:'sidebar_header'_'sidebar_main'] h-dvh overflow-hidden"
         >
           <aside class="bg-white border-r-3 h-dvh [grid-area:sidebar]">
             <div class="p-6">
@@ -215,7 +215,7 @@
           </header>
 
           <!-- main: konten berganti antar view -->
-          <div class="[grid-area:main] px-10 mt-5">
+          <div class="[grid-area:main] px-10 mt-5 min-h-0 overflow-y-auto pb-10">
             <!-- ===== VIEW DASHBOARD ===== -->
             <div id="view-dashboard">
               <div
@@ -440,7 +440,7 @@
             <div class="flex flex-col gap-5">
               <div class="flex items-center justify-between gap-4 flex-wrap border-b-3 pb-4 mt-4">
                 <div>
-                  <h2 class="font-title font-bold text-2xl">Kelola Projek</h2>
+                  <h4 class="font-title font-bold text-2xl">Kelola Projek</h4>
                   <p class="font-body font-medium text-sm text-slate-600 mt-1">
                     Tambah, edit, atau hapus projek portofoliomu.
                   </p>
@@ -453,7 +453,59 @@
                 </button>
               </div>
 
-              <card-project></card-project>
+              <div class="grid grid-cols-[repeat(auto-fit,minmax(min(100%,350px),1fr))] gap-6 px-5">
+                <div class="flex flex-col gap-4 bg-white border-3 shadow-[3px_3px_0] p-4 transition-all duration-300 hover:translate-x-0.75 hover:translate-y-0.75 hover:shadow-[0_0_0]">
+                  <img src="src/assets/img/ilustrasi.png" alt="ilustrasi">
+                  <div class="flex flex-col gap-4">
+                    <h4 class="font-title font-bold text-xl">Web Ramen</h4>
+                    <p class="font-body font-medium text-sm line-clamp-3 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, repudiandae. Recusandae maxime, deserunt facilis voluptates a modi nihil sit enim.</p>
+                  </div>
+
+                  <div class="flex justify-between items-center border-dashed border-t-2 pt-3">
+                    <p class="font-label font-medium text-sm">12/11/2026</p>
+                    <button class="font-label font-medium text-sm flex justify-center items-center gap-2">Edit <i class="fa-solid fa-arrow-right"></i></button>
+                  </div>
+                </div>
+
+                <div class="flex flex-col gap-4 bg-white border-3 shadow-[3px_3px_0] p-4 transition-all duration-300 hover:translate-x-0.75 hover:translate-y-0.75 hover:shadow-[0_0_0]">
+                  <img src="src/assets/img/ilustrasi.png" alt="ilustrasi">
+                  <div class="flex flex-col gap-4">
+                    <h4 class="font-title font-bold text-xl">Web Ramen</h4>
+                    <p class="font-body font-medium text-sm line-clamp-3 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, repudiandae. Recusandae maxime, deserunt facilis voluptates a modi nihil sit enim.</p>
+                  </div>
+
+                  <div class="flex justify-between items-center border-dashed border-t-2 pt-3">
+                    <p class="font-label font-medium text-sm">12/11/2026</p>
+                    <button class="font-label font-medium text-sm flex justify-center items-center gap-2">Edit <i class="fa-solid fa-arrow-right"></i></button>
+                  </div>
+                </div>
+
+                <div class="flex flex-col gap-4 bg-white border-3 shadow-[3px_3px_0] p-4 transition-all duration-300 hover:translate-x-0.75 hover:translate-y-0.75 hover:shadow-[0_0_0]">
+                  <img src="src/assets/img/ilustrasi.png" alt="ilustrasi">
+                  <div class="flex flex-col gap-4">
+                    <h4 class="font-title font-bold text-xl">Web Ramen</h4>
+                    <p class="font-body font-medium text-sm line-clamp-3 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, repudiandae. Recusandae maxime, deserunt facilis voluptates a modi nihil sit enim.</p>
+                  </div>
+
+                  <div class="flex justify-between items-center border-dashed border-t-2 pt-3">
+                    <p class="font-label font-medium text-sm">12/11/2026</p>
+                    <button class="font-label font-medium text-sm flex justify-center items-center gap-2">Edit <i class="fa-solid fa-arrow-right"></i></button>
+                  </div>
+                </div>
+
+                <div class="flex flex-col gap-4 bg-white border-3 shadow-[3px_3px_0] p-4 transition-all duration-300 hover:translate-x-0.75 hover:translate-y-0.75 hover:shadow-[0_0_0]">
+                  <img src="src/assets/img/ilustrasi.png" alt="ilustrasi">
+                  <div class="flex flex-col gap-4">
+                    <h4 class="font-title font-bold text-xl">Web Ramen</h4>
+                    <p class="font-body font-medium text-sm line-clamp-3 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, repudiandae. Recusandae maxime, deserunt facilis voluptates a modi nihil sit enim.</p>
+                  </div>
+
+                  <div class="flex justify-between items-center border-dashed border-t-2 pt-3">
+                    <p class="font-label font-medium text-sm">12/11/2026</p>
+                    <button class="font-label font-medium text-sm flex justify-center items-center gap-2">Edit <i class="fa-solid fa-arrow-right"></i></button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 

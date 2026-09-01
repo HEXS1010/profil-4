@@ -55,12 +55,12 @@ class cardProject extends HTMLElement {
           <a
             href="${project.demo || "#"}"
             class="inline-flex items-center gap-2 text-sm"
-            >Pertinjau <i class="fa-solid fa-eye"></i
+            >Pertinjau <i class="fa-solid fa-eye leading-none"></i
           ></a>
           <a
             href="/project-detail.html?id=${project.id}"
             class="inline-flex items-center gap-2 text-sm"
-            >Lihat Projek <i class="fa-solid fa-arrow-right"></i
+            >Lihat Projek <i class="fa-solid fa-arrow-right leading-none"></i
           ></a>
         </div>
       </article>
