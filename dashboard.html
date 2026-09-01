@@ -115,29 +115,6 @@
 
       <!-- dahsboard -->
       <section id="dashboard-view" class="hidden grow-screen bg-background">
-        <!-- <header class="bg-white border-b-4 sticky top-0 z-10">
-            <div
-              class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
-            >
-              <div class="flex items-center gap-4">
-                <img
-                  class="w-13 h-13"
-                  src="/src/assets/img/logo/logo.png"
-                  alt="Logo HEXS"
-                />
-                <span class="font-title font-bold text-xl md:text-2xl"
-                  >Dashboard</span
-                >
-              </div>
-              <button
-                id="logout-btn"
-                class="flex items-center gap-2 bg-merah border-2 border-black font-label font-medium text-xs md:text-sm px-4 py-2 shadow-[2px_2px_0] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all duration-200"
-              >
-                Logout <i class="fa-solid fa-arrow-right-from-bracket"></i>
-              </button>
-            </div>
-          </header> -->
-
         <div
           class="grid grid-cols-[250px_1fr] grid-rows-[auto_1fr] [grid-template-areas:'sidebar_header'_'sidebar_main'] h-dvh overflow-hidden"
         >
@@ -216,6 +193,13 @@
 
           <!-- main: konten berganti antar view -->
           <div class="[grid-area:main] px-10 mt-5 min-h-0 overflow-y-auto pb-10">
+            
+            <div class="border-b-3 mt-2 pb-4">
+                <h2 class="font-title font-bold text-4xl">Dashboard</h2>
+                <p class="font-body font-medium text-base text-slate-600 mt-1">
+                  Balas pesan masuk dan pantau statusnya (belum/sudah dibaca).
+                </p>
+              </div>
             <!-- ===== VIEW DASHBOARD ===== -->
             <div id="view-dashboard">
               <div
@@ -223,7 +207,7 @@
               >
               <!-- Jumlah Projek -->
               <div
-                class="bg-hijau-200 p-4 border-3 shadow-[8px_8px_0] col-span-1 row-span-1"
+                class="bg-nav-bg p-4 border-3 shadow-[8px_8px_0] col-span-1 row-span-1"
               >
                 <span class="flex items-center justify-between border-b-2 pb-2">
                   <p
@@ -262,7 +246,7 @@
 
               <!-- Pesan Belum Dibaca -->
               <div
-                class="bg-merah-cool p-4 border-3 shadow-[8px_8px_0] col-span-1 sm:col-span-2 lg:col-span-1 row-span-1"
+                class="bg-merah p-4 border-3 shadow-[8px_8px_0] col-span-1 sm:col-span-2 lg:col-span-1 row-span-1"
               >
                 <span class="flex items-center justify-between border-b-2 pb-2">
                   <p
@@ -377,62 +361,7 @@
                   
                 </div>
               </div>
-
-              <!-- Recent projects bento -->
-              <!-- <div
-                class="bg-white p-5 border-3 shadow-[3px_3px_0] col-span-1 sm:col-span-2 lg:col-span-3 xl:col-span-3 row-span-1 flex flex-col"
-              >
-                <div class="flex items-center justify-between mb-4">
-                  <h2 class="font-title font-bold text-xl">Projek Terbaru</h2>
-                  <a
-                    href="#"
-                    class="font-label font-medium text-xs hover:text-black hover:underline"
-                    >Lihat semua <i class="fa-solid fa-arrow-right"></i
-                  ></a>
-                </div>
-                <div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-3">
-                  <div class="bg-loop border-2 p-3">
-                    <p class="font-label font-bold text-sm">Projek A</p>
-                    <p
-                      class="font-body font-medium text-xs text-slate-600 mt-1"
-                    >
-                      Deskripsi singkat projek terbaru.
-                    </p>
-                  </div>
-                  <div class="bg-loop border-2 p-3">
-                    <p class="font-label font-bold text-sm">Projek B</p>
-                    <p
-                      class="font-body font-medium text-xs text-slate-600 mt-1"
-                    >
-                      Deskripsi singkat projek terbaru.
-                    </p>
-                  </div>
-                  <div class="bg-loop border-2 p-3">
-                    <p class="font-label font-bold text-sm">Projek C</p>
-                    <p
-                      class="font-body font-medium text-xs text-slate-600 mt-1"
-                    >
-                      Deskripsi singkat projek terbaru.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="bg-sidebar p-5 border-3 shadow-[3px_3px_0] col-span-1 sm:col-span-2 lg:col-span-1 row-span-1 flex flex-col justify-between"
-              >
-                <h2 class="font-title font-bold text-xl">Pesan Terbaru</h2>
-                <p class="font-body font-medium text-sm">
-                  "Berapa biaya bikin web?"
-                </p>
-                <a
-                  href="message.html"
-                  class="inline-flex items-center gap-2 w-fit bg-white border-2 border-black font-label font-bold text-xs px-3 py-2 shadow-[2px_2px_0] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all duration-200"
-                  >Buka Pesan <i class="fa-solid fa-arrow-right"></i
-                ></a>
-              </div>
-            </div> -->
-          </div>
+            </div>
           </div>
 
           <!-- ===== VIEW PROJEK ===== -->
@@ -512,9 +441,9 @@
           <!-- ===== VIEW PESAN ===== -->
           <div id="view-pesan" class="hidden h-full">
             <div class="flex flex-col gap-5 h-full">
-              <div class="border-b-3 mt-2 pb-2">
-                <h2 class="font-title font-bold text-2xl">Kelola Pesan</h2>
-                <p class="font-body font-medium text-sm text-slate-600 mt-1">
+              <div class="border-b-3 mt-2 pb-4">
+                <h2 class="font-title font-bold text-4xl">Kelola Pesan</h2>
+                <p class="font-body font-medium text-base text-slate-600 mt-1">
                   Balas pesan masuk dan pantau statusnya (belum/sudah dibaca).
                 </p>
               </div>
@@ -529,7 +458,7 @@
                 <div class="flex flex-col gap-5 mt-5 overflow-y-auto flex-1 min-h-0">
                   <div class="bg-sidebar h-15 border-3 flex items-center justify-between px-7 shrink-0">
                     <div class="flex items-center gap-3">
-                      <img class="rounded-full" src="https://placehold.org/30x30" alt="">
+                      <img class="rounded-full" src="https://placehold.co/30x30" alt="">
                       <span class="flex flex-col">
                         <h5 class="font-title font-bold text-sm">Jhon Doe</h5>
                         <p class="font-body font-normal text-gray-700 text-xs">User</p>
@@ -543,7 +472,7 @@
   
                   <div class="bg-sidebar h-15 border-3 flex items-center justify-between px-7 shrink-0">
                     <div class="flex items-center gap-3">
-                      <img class="rounded-full" src="https://placehold.org/30x30" alt="">
+                      <img class="rounded-full" src="https://placehold.co/30x30" alt="">
                       <span class="flex flex-col">
                         <h5 class="font-title font-bold text-sm">Jhon Doe</h5>
                         <p class="font-body font-normal text-gray-700 text-xs">User</p>
@@ -558,7 +487,7 @@
                   <div class="bg-sidebar h-15 border-3 flex items-center justify-between px-7 shrink-0">
                     <div class="flex items-center gap-3">
   
-                      <img class="rounded-full" src="https://placehold.org/30x30" alt="">
+                      <img class="rounded-full" src="https://placehold.co/30x30" alt="">
                       <span class="flex flex-col">
                         <h5 class="font-title font-bold text-sm">Jhon Doe</h5>
                         <p class="font-body font-normal text-gray-700 text-xs">User</p>
@@ -572,7 +501,7 @@
                   <div class="bg-sidebar h-15 border-3 flex items-center justify-between px-7 shrink-0">
                     <div class="flex items-center gap-3">
   
-                      <img class="rounded-full" src="https://placehold.org/30x30" alt="">
+                      <img class="rounded-full" src="https://placehold.co/30x30" alt="">
                       <span class="flex flex-col">
                         <h5 class="font-title font-bold text-sm">Jhon Doe</h5>
                         <p class="font-body font-normal text-gray-700 text-xs">User</p>
@@ -586,7 +515,7 @@
                   <div class="bg-sidebar h-15 border-3 flex items-center justify-between px-7 shrink-0">
                     <div class="flex items-center gap-3">
   
-                      <img class="rounded-full" src="https://placehold.org/30x30" alt="">
+                      <img class="rounded-full" src="https://placehold.co/30x30" alt="">
                       <span class="flex flex-col">
                         <h5 class="font-title font-bold text-sm">Jhon Doe</h5>
                         <p class="font-body font-normal text-gray-700 text-xs">User</p>
@@ -596,51 +525,9 @@
                     <p class="font-label font-medium text-base">jhonDoe@gmail.com</p>
   
                     <p class="font-label font-medium text-base">20/03/2026</p>
-                  </div>                  
-                  <div class="bg-sidebar h-15 border-3 flex items-center justify-between px-7 shrink-0">
-                    <div class="flex items-center gap-3">
-  
-                      <img class="rounded-full" src="https://placehold.org/30x30" alt="">
-                      <span class="flex flex-col">
-                        <h5 class="font-title font-bold text-sm">Jhon Doe</h5>
-                        <p class="font-body font-normal text-gray-700 text-xs">User</p>
-                      </span>
-                    </div>
-  
-                    <p class="font-label font-medium text-base">jhonDoe@gmail.com</p>
-  
-                    <p class="font-label font-medium text-base">20/03/2026</p>
-                  </div>                  
-                  <div class="bg-sidebar h-15 border-3 flex items-center justify-between px-7 shrink-0">
-                    <div class="flex items-center gap-3">
-  
-                      <img class="rounded-full" src="https://placehold.org/30x30" alt="">
-                      <span class="flex flex-col">
-                        <h5 class="font-title font-bold text-sm">Jhon Doe</h5>
-                        <p class="font-body font-normal text-gray-700 text-xs">User</p>
-                      </span>
-                    </div>
-  
-                    <p class="font-label font-medium text-base">jhonDoe@gmail.com</p>
-  
-                    <p class="font-label font-medium text-base">20/03/2026</p>
-                  </div>                  
-                  <div class="bg-sidebar h-15 border-3 flex items-center justify-between px-7 shrink-0">
-                    <div class="flex items-center gap-3">
-  
-                      <img class="rounded-full" src="https://placehold.org/30x30" alt="">
-                      <span class="flex flex-col">
-                        <h5 class="font-title font-bold text-sm">Jhon Doe</h5>
-                        <p class="font-body font-normal text-gray-700 text-xs">User</p>
-                      </span>
-                    </div>
-  
-                    <p class="font-label font-medium text-base">jhonDoe@gmail.com</p>
-  
-                    <p class="font-label font-medium text-base">20/03/2026</p>
-                  </div>                  
+                  </div>                                       
                 </div>
-                </div>
+              </div>
             </div>
           </div>
         </div>
