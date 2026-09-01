@@ -141,32 +141,72 @@
         <div class="grid grid-cols-[250px_1fr]">
           <aside class="bg-white border-r-3 h-dvh">
             <div class="p-6">
-              <div class="flex gap-4 justify-between items-center border-b-3">
+              <div
+                class="flex gap-4 justify-between items-center border-b-3 pb-5"
+              >
                 <img
-                  class="w-[40%]"
+                  class="w-[35%]"
                   src="src/assets/img/logo/logo.png"
                   alt="logo"
                 />
                 <button
                   id="sidebar-close"
                   type="button"
-                  class="text-2xl w-10 h-10 flex items-center justify-center rounded-full bg-sidebar shadow-[2px_2px_0] border-2 hover:rotate-90 transition-all duration-200"
+                  class="text-2xl w-10 h-10 flex items-center justify-center rounded-full bg-sidebar shadow-[2px_2px_0] border-2 transition-all duration-300 hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[0_0_0]"
                   aria-label="Tutup sidebar"
                 >
                   <i class="fa-solid fa-xmark"></i>
                 </button>
               </div>
 
-              <ul class="mt-10 flex flex-col gap-5 font-label font-medium">
-                <li><a href=""><i class="fa-solid fa-house"></i> Dashboard</a></li>
-                <li><a href="">Projek</a></li>
-                <li id="logout-btn"><a href=""><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+              <ul class="mt-10 flex flex-col gap-7 font-label font-medium">
+                <li class="transition-all duration-300 hover:pl-2">
+                  <a href=""><i class="fa-solid fa-house"></i> Dashboard</a>
+                </li>
+                <li class="transition-all duration-300 hover:pl-2">
+                  <a href=""><i class="fa-solid fa-folder"></i> Projek</a>
+                </li>
+                <li
+                  id="logout-btn"
+                  class="transition-all duration-300 hover:pl-2"
+                >
+                  <a href=""
+                    ><i class="fa-solid fa-right-from-bracket"></i> Logout</a
+                  >
+                </li>
               </ul>
             </div>
           </aside>
 
           <!-- main -->
-          <div class="max-w-7xl mx-auto px-6 py-10">
+          <div class="px-20">
+            <div class="grid grid-cols-[1fr_1fr_1fr_1fr] gap-4">
+              <div class="bg-nav-bg p-2 border-3 shadow-[3px_3px_0]">
+                <h2 class="font-title font-medium border-b-3 text-xl pb-2">Jumlah Projek</h2>
+                <p class="font-title font-semibold text-4xl mt-5">100</p>
+              </div>
+
+              <div class="bg-oren p-2 border-3 shadow-[3px_3px_0]">
+                <h2 class="font-title font-medium border-b-3 text-xl pb-2">Jumlah Pesan</h2>
+                <p class="font-title font-semibold text-4xl mt-5">200</p>
+              </div>
+
+              <div class="bg-merah p-2 border-3 shadow-[3px_3px_0]">
+                <h2 class="font-title font-medium border-b-3 text-xl pb-2">
+                  Pesan Belom Dibaca
+                </h2>
+                <p class="font-title font-semibold text-4xl mt-5">300</p>
+              </div>
+
+              <div class="bg-krim p-2 border-3 shadow-[3px_3px_0]">
+                <h2 class="font-title font-medium border-b-3 text-xl pb-2">
+                  Pesan Sudah Dibaca
+                </h2>
+                <p class="font-title font-semibold text-4xl mt-5">400</p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="max-w-7xl mx-auto px-6 py-10">
             <div
               class="bg-white border-3 border-black shadow-[4px_4px_0] p-8 text-center"
             >
@@ -179,7 +219,7 @@
                 edit, hapus) menyusul di sini.
               </p>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
     </main>
