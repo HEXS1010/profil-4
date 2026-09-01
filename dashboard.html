@@ -179,30 +179,142 @@
           </aside>
 
           <!-- main -->
-          <div class="px-20">
-            <div class="grid grid-cols-[1fr_1fr_1fr_1fr] gap-4">
-              <div class="bg-nav-bg p-2 border-3 shadow-[3px_3px_0]">
-                <h2 class="font-title font-medium border-b-3 text-xl pb-2">Jumlah Projek</h2>
-                <p class="font-title font-semibold text-4xl mt-5">100</p>
+          <div class="px-5 md:px-10 lg:px-20 py-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-8">
+              <div>
+                <h1 class="font-title font-bold text-3xl">Dashboard</h1>
+                <p class="font-body font-medium text-sm text-slate-600 mt-1">
+                  Ringkasan projek &amp; pesan portofoliomu dalam satu bento.
+                </p>
+              </div>
+              <span
+                class="w-fit font-label font-medium text-xs bg-sidebar border-2 border-black shadow-[2px_2px_0] px-3 py-2"
+              >
+                <i class="fa-solid fa-wand-magic-sparkles mr-1"></i> Bento Grid
+              </span>
+            </div>
+
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 auto-rows-[minmax(110px,auto)] gap-4"
+            >
+              <!-- kartu besar: sambutan -->
+              <div
+                class="bg-nav-bg p-5 border-3 shadow-[3px_3px_0] col-span-1 sm:col-span-2 lg:col-span-2 xl:col-span-2 xl:row-span-2 flex flex-col justify-between"
+              >
+                <div>
+                  <h2 class="font-title font-bold text-2xl md:text-3xl">Selamat datang, Admin!</h2>
+                  <p class="font-body font-medium text-sm mt-3 text-slate-800 max-w-md">
+                    Semua projek dan pesan portofoliomu kelihatan rapi di sini.
+                    Tambah, edit, atau kelola semuanya dari dashboard ini.
+                  </p>
+                </div>
+                <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                  <button
+                    type="button"
+                    class="inline-flex items-center gap-2 w-fit bg-sidebar border-2 border-black font-label font-bold text-sm px-4 py-2 shadow-[3px_3px_0] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all duration-200"
+                  >
+                    <i class="fa-solid fa-plus"></i> Tambah Projek
+                  </button>
+                  <button
+                    type="button"
+                    class="inline-flex items-center gap-2 w-fit bg-white border-2 border-black font-label font-bold text-sm px-4 py-2 shadow-[3px_3px_0] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all duration-200"
+                  >
+                    <i class="fa-solid fa-eye"></i> Lihat Beranda
+                  </button>
+                </div>
               </div>
 
-              <div class="bg-oren p-2 border-3 shadow-[3px_3px_0]">
-                <h2 class="font-title font-medium border-b-3 text-xl pb-2">Jumlah Pesan</h2>
-                <p class="font-title font-semibold text-4xl mt-5">200</p>
-              </div>
-
-              <div class="bg-merah p-2 border-3 shadow-[3px_3px_0]">
-                <h2 class="font-title font-medium border-b-3 text-xl pb-2">
-                  Pesan Belom Dibaca
+              <!-- Jumlah Projek -->
+              <div
+                class="bg-white p-4 border-3 shadow-[3px_3px_0] col-span-1 row-span-1"
+              >
+                <h2 class="font-label font-bold text-xs uppercase tracking-wide">
+                  Jumlah Projek
                 </h2>
-                <p class="font-title font-semibold text-4xl mt-5">300</p>
+                <p class="font-title font-bold text-4xl mt-4">100</p>
+                <p class="font-body font-medium text-xs text-slate-500 mt-2">
+                  <i class="fa-solid fa-arrow-trend-up text-green-600"></i> +2 minggu ini
+                </p>
               </div>
 
-              <div class="bg-krim p-2 border-3 shadow-[3px_3px_0]">
-                <h2 class="font-title font-medium border-b-3 text-xl pb-2">
+              <!-- Jumlah Pesan -->
+              <div
+                class="bg-oren p-4 border-3 shadow-[3px_3px_0] col-span-1 row-span-1"
+              >
+                <h2 class="font-label font-bold text-xs uppercase tracking-wide">
+                  Jumlah Pesan
+                </h2>
+                <p class="font-title font-bold text-4xl mt-4">200</p>
+                <p class="font-body font-medium text-xs text-slate-700 mt-2">
+                  Total masuk
+                </p>
+              </div>
+
+              <!-- Pesan Belum Dibaca -->
+              <div
+                class="bg-merah p-4 border-3 shadow-[3px_3px_0] col-span-1 sm:col-span-2 lg:col-span-1 row-span-1"
+              >
+                <h2 class="font-label font-bold text-xs uppercase tracking-wide">
+                  Pesan Belum Dibaca
+                </h2>
+                <p class="font-title font-bold text-4xl mt-4">300</p>
+              </div>
+
+              <!-- Pesan Sudah Dibaca -->
+              <div
+                class="bg-krim p-4 border-3 shadow-[3px_3px_0] col-span-1 sm:col-span-2 lg:col-span-1 row-span-1"
+              >
+                <h2 class="font-label font-bold text-xs uppercase tracking-wide">
                   Pesan Sudah Dibaca
                 </h2>
-                <p class="font-title font-semibold text-4xl mt-5">400</p>
+                <p class="font-title font-bold text-4xl mt-4">400</p>
+              </div>
+
+              <!-- Recent projects bento -->
+              <div
+                class="bg-white p-5 border-3 shadow-[3px_3px_0] col-span-1 sm:col-span-2 lg:col-span-3 xl:col-span-3 row-span-1 flex flex-col"
+              >
+                <div class="flex items-center justify-between mb-4">
+                  <h2 class="font-title font-bold text-xl">Projek Terbaru</h2>
+                  <a
+                    href="#"
+                    class="font-label font-medium text-xs hover:text-black hover:underline"
+                    >Lihat semua <i class="fa-solid fa-arrow-right"></i
+                  ></a>
+                </div>
+                <div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-3">
+                  <div class="bg-loop border-2 p-3">
+                    <p class="font-label font-bold text-sm">Projek A</p>
+                    <p class="font-body font-medium text-xs text-slate-600 mt-1">
+                      Deskripsi singkat projek terbaru.
+                    </p>
+                  </div>
+                  <div class="bg-loop border-2 p-3">
+                    <p class="font-label font-bold text-sm">Projek B</p>
+                    <p class="font-body font-medium text-xs text-slate-600 mt-1">
+                      Deskripsi singkat projek terbaru.
+                    </p>
+                  </div>
+                  <div class="bg-loop border-2 p-3">
+                    <p class="font-label font-bold text-sm">Projek C</p>
+                    <p class="font-body font-medium text-xs text-slate-600 mt-1">
+                      Deskripsi singkat projek terbaru.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pesan terbaru bento -->
+              <div
+                class="bg-sidebar p-5 border-3 shadow-[3px_3px_0] col-span-1 sm:col-span-2 lg:col-span-1 row-span-1 flex flex-col justify-between"
+              >
+                <h2 class="font-title font-bold text-xl">Pesan Terbaru</h2>
+                <p class="font-body font-medium text-sm">"Berapa biaya bikin web?"</p>
+                <a
+                  href="message.html"
+                  class="inline-flex items-center gap-2 w-fit bg-white border-2 border-black font-label font-bold text-xs px-3 py-2 shadow-[2px_2px_0] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all duration-200"
+                  >Buka Pesan <i class="fa-solid fa-arrow-right"></i
+                ></a>
               </div>
             </div>
           </div>
