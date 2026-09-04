@@ -1,25 +1,75 @@
 import { getProjects, categoryColor } from "../data/projects.js";
 
 class cardProject extends HTMLElement {
+  constructor() {
+    super();
+    this.currentPage = 1;
+    this.totalPages = 1;
+    this.listenerAttached = false;
+  }
+
   connectedCallback() {
     this.render();
+  }
+
+  perPage() {
+    return parseInt(this.getAttribute("per-page"), 10);
+  }
+
+  limit() {
+    return parseInt(this.getAttribute("limit"), 10);
+  }
+
+  getPaginationEl() {
+    return this.parentElement ? this.parentElement.querySelector("pagination-com") : null;
   }
 
   async render() {
     this.innerHTML = this.skeleton();
 
+    const per = this.perPage();
+    const max = this.limit();
+
     try {
       const projects = await getProjects();
+
+      let shown = projects;
+      if (Number.isInteger(per) && per > 0) {
+        this.totalPages = Math.max(1, Math.ceil(projects.length / per));
+        this.currentPage = Math.min(this.currentPage, this.totalPages);
+        shown = projects.slice((this.currentPage - 1) * per, this.currentPage * per);
+      } else if (Number.isInteger(max) && max > 0) {
+        shown = projects.slice(0, max);
+      }
+
       this.innerHTML = `
         <div
-          class="grid grid-cols-[repeat(auto-fit,minmax(min(100%,350px),1fr))] gap-6 mt-20 px-5"
+          class="grid grid-cols-[repeat(auto-fill,minmax(min(100%,350px),1fr))] gap-6 mt-20 px-5"
         >
-          ${projects.map((project) => this.cardTemplate(project)).join("")}
+          ${shown.map((project) => this.cardTemplate(project)).join("")}
         </div>
       `;
+
+      this.syncPagination();
     } catch {
       this.innerHTML = this.errorTemplate();
       this.querySelector("button").addEventListener("click", () => this.render());
+    }
+  }
+
+  syncPagination() {
+    const pagination = this.getPaginationEl();
+    if (!pagination) return;
+
+    pagination.setState(this.currentPage, this.totalPages);
+
+    if (!this.listenerAttached) {
+      this.listenerAttached = true;
+      pagination.addEventListener("pagination-change", (e) => {
+        this.currentPage = e.detail.page;
+        this.render();
+        window.scrollTo({ top: this.offsetTop - 80, behavior: "smooth" });
+      });
     }
   }
 
@@ -31,6 +81,7 @@ class cardProject extends HTMLElement {
         <img
           src="${project.image}"
           alt="${project.alt}"
+          onerror="this.onerror=null; this.src='src/assets/img/img-error.png';"
           class="w-full aspect-video object-cover border-2"
         />
 
@@ -82,7 +133,7 @@ class cardProject extends HTMLElement {
 
     return `
       <div
-        class="grid grid-cols-[repeat(auto-fit,minmax(min(100%,350px),1fr))] gap-6 mt-20 px-5"
+        class="grid grid-cols-[repeat(auto-fill,minmax(min(100%,350px),1fr))] gap-6 mt-20 px-5"
         aria-hidden="true"
       >
         ${placeholder.repeat(6)}

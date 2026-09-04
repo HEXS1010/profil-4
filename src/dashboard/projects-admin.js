@@ -156,7 +156,7 @@ function cardTemplate(p) {
   const catBg = categoryColor(p.category);
   return `
     <div class="flex flex-col gap-4 bg-white border-3 shadow-[3px_3px_0] p-4 transition-all duration-300 hover:translate-x-0.75 hover:translate-y-0.75 hover:shadow-[0_0_0]">
-      <img src="${esc(p.image || "src/assets/img/ilustrasi.png")}" alt="${esc(p.alt || p.title)}" class="w-full aspect-video object-cover border-2 border-black">
+      <img src="${esc(p.image || "src/assets/img/ilustrasi.png")}" alt="${esc(p.alt || p.title)}" onerror="this.onerror=null; this.src='src/assets/img/img-error.png';" class="w-full aspect-video object-cover border-2 border-black">
       <div class="flex flex-col gap-2">
         <span class="${catBg} self-start px-2 py-1 font-label font-bold text-xs border-2 border-black">${esc(p.category)}</span>
         <h4 class="font-title font-bold text-xl">${esc(p.title)}</h4>

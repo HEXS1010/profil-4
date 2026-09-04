@@ -18,6 +18,7 @@ class DetailBody extends HTMLElement {
       <img
         src="${project.image}"
         alt="${project.alt}"
+        onerror="this.onerror=null; this.src='src/assets/img/img-error.png';"
         class="w-xl aspect-video object-cover border-3 block mx-auto"
       />
 
