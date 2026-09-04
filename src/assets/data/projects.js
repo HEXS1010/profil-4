@@ -165,15 +165,14 @@ const categoryColors = {
 export const categoryColor = (category) => categoryColors[category] || "bg-white";
 
 export async function getProjects() {
-  return localProjects;
+  try {
+    const res = await fetch("/api/projects");
+    if (!res.ok) throw new Error("Gagal memuat projek");
+    return res.json();
+  } catch {
+    return localProjects;
+  }
 }
-
-// === NANTI (saat backend sudah jadi, ganti isi fungsi di atas) ===
-// export async function getProjects() {
-//   const res = await fetch("/api/projects");
-//   if (!res.ok) throw new Error("Gagal memuat projek");
-//   return res.json();
-// }
 
 export async function getProjectById(id) {
   const projects = await getProjects();

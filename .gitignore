@@ -25,3 +25,7 @@ dist-ssr
 
 GEMINI.md
 OPENCODE.md
+
+# Backend runtime data
+server/data.db*
+server/uploads/
