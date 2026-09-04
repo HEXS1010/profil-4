@@ -1,6 +1,7 @@
 import "../assets/component/Tooltip.js";
 import "../assets/component/card-project.js";
 import { loadProjects, loadHistoris, updateStats } from "./projects-admin.js";
+import { loadMessages } from "./messages-admin.js";
 
 const loginView = document.getElementById("login-view");
 const dashboardView = document.getElementById("dashboard-view");
@@ -17,6 +18,7 @@ const showDashboard = () => {
   dashboardView.classList.remove("hidden");
   loadProjects();
   loadHistoris();
+  loadMessages();
   updateStats();
 };
 

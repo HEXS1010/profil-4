@@ -7,6 +7,7 @@ import { uploadsDir } from "./db.js";
 import projectsRouter from "./routes/projects.js";
 import historisRouter from "./routes/historis.js";
 import uploadRouter from "./routes/upload.js";
+import messagesRouter from "./routes/messages.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const distDir = path.join(__dirname, "..", "dist");
@@ -22,6 +23,7 @@ app.use("/uploads", express.static(uploadsDir));
 app.use("/api/projects", projectsRouter);
 app.use("/api/historis", historisRouter);
 app.use("/api/upload", uploadRouter);
+app.use("/api/messages", messagesRouter);
 
 app.get("/api/health", (_req, res) => res.json({ ok: true }));
 

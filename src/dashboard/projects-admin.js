@@ -224,6 +224,26 @@ export async function updateStats() {
   } catch {
     /* abaikan */
   }
+
+  try {
+    const res = await fetch("/api/messages");
+    if (res.ok) {
+      const list = await res.json();
+      const belum = list.filter((m) => !m.is_read).length;
+      const sudah = list.filter((m) => m.is_read).length;
+      const map = {
+        "stat-pesan": list.length,
+        "stat-pesan-belum": belum,
+        "stat-pesan-sudah": sudah,
+      };
+      for (const [id, value] of Object.entries(map)) {
+        const el = document.getElementById(id);
+        if (el) el.textContent = value;
+      }
+    }
+  } catch {
+    /* abaikan */
+  }
 }
 
 btnTambah.addEventListener("click", () => openModal());

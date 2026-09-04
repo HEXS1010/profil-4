@@ -19,6 +19,7 @@ loadComponent("card-project", "./assets/component/card-project.js");
 loadComponent("detail-header-com", "./assets/component/detail-header.js");
 loadComponent("detail-body-com", "./assets/component/detail-body.js");
 loadComponent("colaboration-com", "./assets/component/colaboration.js");
+loadComponent("#form-kontak", "./message.js");
 
 import { initDotGrid } from "./assets/dot-grid.js";
 // import { initLogoSlider } from "./assets/logo-slider.js";

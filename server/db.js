@@ -41,6 +41,7 @@ db.exec(`
     id         TEXT PRIMARY KEY,
     name       TEXT NOT NULL,
     email      TEXT NOT NULL,
+    subject    TEXT,
     message    TEXT NOT NULL,
     avatar     TEXT,
     is_read    INTEGER NOT NULL DEFAULT 0,
@@ -49,5 +50,11 @@ db.exec(`
     created_at TEXT NOT NULL DEFAULT (datetime('now'))
   );
 `);
+
+// Migrasi ringan: tambah kolom `subject` jika tabel `messages` sudah ada tanpa kolom tsb.
+const msgCols = db.prepare("PRAGMA table_info(messages)").all().map((c) => c.name);
+if (!msgCols.includes("subject")) {
+  db.exec("ALTER TABLE messages ADD COLUMN subject TEXT");
+}
 
 export { db, uploadsDir };

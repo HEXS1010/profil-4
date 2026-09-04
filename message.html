@@ -47,7 +47,7 @@
 
           <div class=" md:w-2/3 px-3 py-8">
             <h2 class="font-title font-bold text-3xl mb-6">Kirim Pesan</h2>
-            <form class="flex flex-col gap-4">
+            <form id="form-kontak" class="flex flex-col gap-4">
               <div class="flex flex-col gap-1">
                 <label for="name" class="font-label font-bold text-sm"
                   >Nama</label
@@ -113,6 +113,10 @@
                   Reset <i class="fa-solid fa-arrow-rotate-left"></i>
                 </button>
               </div>
+              <p
+                id="form-kontak-status"
+                class="hidden font-body font-medium text-sm px-3 py-2 border-2"
+              ></p>
             </form>
           </div>
         </div>

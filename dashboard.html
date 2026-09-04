@@ -238,7 +238,7 @@
                   </p>
                   <i class="fa-solid fa-message text-sm"></i>
                 </span>
-                <p class="font-title font-bold text-4xl mt-4">200</p>
+                <p id="stat-pesan" class="font-title font-bold text-4xl mt-4">0</p>
                 <p class="font-body font-medium text-xs text-slate-700 mt-2">
                   Total masuk
                 </p>
@@ -256,7 +256,7 @@
                   </p>
                   <i class="fa-solid fa-envelope text-sm"></i>
                 </span>
-                <p class="font-title font-bold text-4xl mt-4">300</p>
+                <p id="stat-pesan-belum" class="font-title font-bold text-4xl mt-4">0</p>
                 <p class="font-body font-medium text-xs text-slate-700 mt-2">
                   Segera Periksa
                 </p>
@@ -274,7 +274,7 @@
                   </p>
                   <i class="fa-solid fa-envelope-open text-sm"></i>
                 </span>
-                <p class="font-title font-bold text-4xl mt-4">400</p>
+                <p id="stat-pesan-sudah" class="font-title font-bold text-4xl mt-4">0</p>
                 <p class="font-body font-medium text-xs text-slate-700 mt-2">
                   Tersimpan Diarsip
                 </p>
@@ -406,8 +406,6 @@
               </form>
             </div>
           </div>
-        </div>
-      </section>
 
           <!-- ===== VIEW PESAN ===== -->
           <div id="view-pesan" class="hidden h-full">
@@ -415,92 +413,64 @@
               <div class="border-b-3 mt-2 pb-4">
                 <h2 class="font-title font-bold text-4xl">Kelola Pesan</h2>
                 <p class="font-body font-medium text-base text-slate-600 mt-1">
-                  Balas pesan masuk dan pantau statusnya (belum/sudah dibaca).
+                  Kelola pesan masuk dari formulir kontak. Klik baris untuk melihat detail.
                 </p>
               </div>
 
-              
               <div class="bg-white flex flex-col gap-5 border-3 py-5 px-5 flex-1 min-h-0">
-                <header class="flex justify-between items-center  px-10 border-b-2 pb-2 shrink-0">
+                <header class="flex justify-between items-center px-10 border-b-2 pb-2 shrink-0">
                   <p class="font-label font-medium text-lg">Nama</p>
                   <p class="font-label font-medium text-lg">Email</p>
                   <p class="font-label font-medium text-lg">Tanggal</p>
                 </header>
-                <div class="flex flex-col gap-5 mt-5 overflow-y-auto flex-1 min-h-0">
-                  <div class="bg-sidebar h-15 border-3 flex items-center justify-between px-7 shrink-0">
-                    <div class="flex items-center gap-3">
-                      <img class="rounded-full" src="https://placehold.co/30x30" alt="">
-                      <span class="flex flex-col">
-                        <h5 class="font-title font-bold text-sm">Jhon Doe</h5>
-                        <p class="font-body font-normal text-gray-700 text-xs">User</p>
-                      </span>
-                    </div>
-  
-                    <p class="font-label font-medium text-base">jhonDoe@gmail.com</p>
-  
-                    <p class="font-label font-medium text-base">20/03/2026</p>
+                <p id="pesan-empty" class="hidden font-body font-medium text-sm text-slate-500 text-center py-10">
+                  Belum ada pesan masuk.
+                </p>
+                <div id="pesan-list" class="flex flex-col gap-5 mt-5 overflow-y-auto flex-1 min-h-0"></div>
+              </div>
+            </div>
+
+            <!-- MODAL DETAIL PESAN -->
+            <div id="modal-pesan-detail" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+              <div class="absolute inset-0 bg-black/60" data-close-pesan></div>
+              <div class="relative bg-white border-4 border-black shadow-[8px_8px_0] w-full max-w-lg max-h-[90vh] flex flex-col">
+                <header class="flex items-center justify-between border-b-3 px-6 py-4 shrink-0">
+                  <h3 class="font-title font-bold text-2xl">Detail Pesan</h3>
+                  <button
+                    type="button"
+                    data-close-pesan
+                    class="text-2xl w-10 h-10 flex items-center justify-center rounded-full bg-sidebar shadow-[2px_2px_0] border-2 transition-all duration-300 hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[0_0_0]"
+                    aria-label="Tutup"
+                  >
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </header>
+                <div class="overflow-y-auto px-6 py-5 flex flex-col gap-4">
+                  <div>
+                    <p class="font-label font-bold text-xs uppercase tracking-wide text-slate-500">Dari</p>
+                    <p id="pesan-detail-nama" class="font-title font-bold text-xl"></p>
                   </div>
-  
-                  <div class="bg-sidebar h-15 border-3 flex items-center justify-between px-7 shrink-0">
-                    <div class="flex items-center gap-3">
-                      <img class="rounded-full" src="https://placehold.co/30x30" alt="">
-                      <span class="flex flex-col">
-                        <h5 class="font-title font-bold text-sm">Jhon Doe</h5>
-                        <p class="font-body font-normal text-gray-700 text-xs">User</p>
-                      </span>
-                    </div>
-  
-                    <p class="font-label font-medium text-base">jhonDoe@gmail.com</p>
-  
-                    <p class="font-label font-medium text-base">20/03/2026</p>
+                  <div>
+                    <p class="font-label font-bold text-xs uppercase tracking-wide text-slate-500">Email</p>
+                    <p id="pesan-detail-email" class="font-body font-medium text-sm break-all"></p>
                   </div>
-  
-                  <div class="bg-sidebar h-15 border-3 flex items-center justify-between px-7 shrink-0">
-                    <div class="flex items-center gap-3">
-  
-                      <img class="rounded-full" src="https://placehold.co/30x30" alt="">
-                      <span class="flex flex-col">
-                        <h5 class="font-title font-bold text-sm">Jhon Doe</h5>
-                        <p class="font-body font-normal text-gray-700 text-xs">User</p>
-                      </span>
-                    </div>
-  
-                    <p class="font-label font-medium text-base">jhonDoe@gmail.com</p>
-  
-                    <p class="font-label font-medium text-base">20/03/2026</p>
-                  </div>                  
-                  <div class="bg-sidebar h-15 border-3 flex items-center justify-between px-7 shrink-0">
-                    <div class="flex items-center gap-3">
-  
-                      <img class="rounded-full" src="https://placehold.co/30x30" alt="">
-                      <span class="flex flex-col">
-                        <h5 class="font-title font-bold text-sm">Jhon Doe</h5>
-                        <p class="font-body font-normal text-gray-700 text-xs">User</p>
-                      </span>
-                    </div>
-  
-                    <p class="font-label font-medium text-base">jhonDoe@gmail.com</p>
-  
-                    <p class="font-label font-medium text-base">20/03/2026</p>
-                  </div>                  
-                  <div class="bg-sidebar h-15 border-3 flex items-center justify-between px-7 shrink-0">
-                    <div class="flex items-center gap-3">
-  
-                      <img class="rounded-full" src="https://placehold.co/30x30" alt="">
-                      <span class="flex flex-col">
-                        <h5 class="font-title font-bold text-sm">Jhon Doe</h5>
-                        <p class="font-body font-normal text-gray-700 text-xs">User</p>
-                      </span>
-                    </div>
-  
-                    <p class="font-label font-medium text-base">jhonDoe@gmail.com</p>
-  
-                    <p class="font-label font-medium text-base">20/03/2026</p>
-                  </div>                                       
+                  <div>
+                    <p class="font-label font-bold text-xs uppercase tracking-wide text-slate-500">Tujuan</p>
+                    <p id="pesan-detail-subject" class="font-body font-medium text-sm"></p>
+                  </div>
+                  <div>
+                    <p class="font-label font-bold text-xs uppercase tracking-wide text-slate-500">Isi Pesan</p>
+                    <p id="pesan-detail-message" class="font-body font-medium text-sm whitespace-pre-wrap"></p>
+                  </div>
+                  <div class="flex items-center gap-3 border-t-2 pt-3">
+                    <span id="pesan-detail-status" class="font-label font-bold text-xs px-2 py-1 border-2"></span>
+                    <p class="font-body font-medium text-xs text-slate-500">Status ini hanya penanda, pesan tetap bisa dibuka lagi.</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
         </div>
       </section>
 
