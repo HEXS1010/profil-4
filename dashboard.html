@@ -171,8 +171,13 @@
             class="[grid-area:header] w-full h-20 bg-white border-b-2 flex flex-col md:flex-row md:items-center justify-between gap-3 px-10 py-5"
           >
             <div>
-              <h1 id="view-title" class="font-title font-bold text-xl">Dashboard</h1>
-              <p id="view-desc" class="font-body font-medium text-sm text-slate-600 mt-1">
+              <h1 id="view-title" class="font-title font-bold text-xl">
+                Dashboard
+              </h1>
+              <p
+                id="view-desc"
+                class="font-body font-medium text-sm text-slate-600 mt-1"
+              >
                 Ringkasan projek &amp; pesan portofoliomu dalam satu bento.
               </p>
             </div>
@@ -192,7 +197,9 @@
           </header>
 
           <!-- main: konten berganti antar view -->
-          <div class="grid-bg [grid-area:main] px-10 min-h-0 overflow-y-auto pb-10">
+          <div
+            class="grid-bg [grid-area:main] px-10 min-h-0 overflow-y-auto pb-10"
+          >
             <!-- ===== VIEW DASHBOARD ===== -->
             <div id="view-dashboard">
               <div class="border-b-3 mt-8 pb-4">
@@ -204,277 +211,459 @@
               <div
                 class="grid grid-cols-2 mt-5 lg:grid-cols-3 xl:grid-cols-4 auto-rows-[minmax(100px,auto)] gap-4"
               >
-              <!-- Jumlah Projek -->
-               
-              <div
-                class="bg-nav-bg p-4 border-3 shadow-[8px_8px_0] col-span-1 row-span-1"
-              >
-                <span class="flex items-center justify-between border-b-2 pb-2">
-                  <p
-                    class="font-label font-bold text-xs uppercase tracking-wide"
+                <!-- Jumlah Projek -->
+
+                <div
+                  class="bg-nav-bg p-4 border-3 shadow-[8px_8px_0] col-span-1 row-span-1"
+                >
+                  <span
+                    class="flex items-center justify-between border-b-2 pb-2"
                   >
-                    Jumlah Projek
-                  </p>
-                  <i class="fa-solid fa-folder text-sm"></i>
-                </span>
+                    <p
+                      class="font-label font-bold text-xs uppercase tracking-wide"
+                    >
+                      Jumlah Projek
+                    </p>
+                    <i class="fa-solid fa-folder text-sm"></i>
+                  </span>
 
-                <p id="stat-projek" class="font-title font-bold text-5xl mt-4">0</p>
-
-                <p class="font-body font-medium text-xs text-slate-500 mt-2">
-                  <i class="fa-solid fa-arrow-trend-up text-green-600"></i> +2
-                  minggu ini
-                </p>
-              </div>
-
-              <!-- Jumlah Pesan -->
-              <div
-                class="bg-oren p-4 border-3 shadow-[8px_8px_0] col-span-1 row-span-1"
-              >
-                <span class="flex items-center justify-between border-b-2 pb-2">
                   <p
-                    class="font-label font-bold text-xs uppercase tracking-wide"
+                    id="stat-projek"
+                    class="font-title font-bold text-5xl mt-4"
                   >
-                    Jumlah Pesan
+                    0
                   </p>
-                  <i class="fa-solid fa-message text-sm"></i>
-                </span>
-                <p id="stat-pesan" class="font-title font-bold text-4xl mt-4">0</p>
-                <p class="font-body font-medium text-xs text-slate-700 mt-2">
-                  Total masuk
-                </p>
-              </div>
 
-              <!-- Pesan Belum Dibaca -->
-              <div
-                class="bg-merah p-4 border-3 shadow-[8px_8px_0] col-span-1 sm:col-span-2 lg:col-span-1 row-span-1"
-              >
-                <span class="flex items-center justify-between border-b-2 pb-2">
+                  <p class="font-body font-medium text-xs text-slate-500 mt-2">
+                    <i class="fa-solid fa-arrow-trend-up text-green-600"></i> +2
+                    minggu ini
+                  </p>
+                </div>
+
+                <!-- Jumlah Pesan -->
+                <div
+                  class="bg-oren p-4 border-3 shadow-[8px_8px_0] col-span-1 row-span-1"
+                >
+                  <span
+                    class="flex items-center justify-between border-b-2 pb-2"
+                  >
+                    <p
+                      class="font-label font-bold text-xs uppercase tracking-wide"
+                    >
+                      Jumlah Pesan
+                    </p>
+                    <i class="fa-solid fa-message text-sm"></i>
+                  </span>
+                  <p id="stat-pesan" class="font-title font-bold text-4xl mt-4">
+                    0
+                  </p>
+                  <p class="font-body font-medium text-xs text-slate-700 mt-2">
+                    Total masuk
+                  </p>
+                </div>
+
+                <!-- Pesan Belum Dibaca -->
+                <div
+                  class="bg-merah p-4 border-3 shadow-[8px_8px_0] col-span-1 sm:col-span-2 lg:col-span-1 row-span-1"
+                >
+                  <span
+                    class="flex items-center justify-between border-b-2 pb-2"
+                  >
+                    <p
+                      class="font-label font-bold text-xs uppercase tracking-wide"
+                    >
+                      Pesan Belom Dibaca
+                    </p>
+                    <i class="fa-solid fa-envelope text-sm"></i>
+                  </span>
                   <p
-                    class="font-label font-bold text-xs uppercase tracking-wide"
+                    id="stat-pesan-belum"
+                    class="font-title font-bold text-4xl mt-4"
                   >
-                    Pesan Belom Dibaca
+                    0
                   </p>
-                  <i class="fa-solid fa-envelope text-sm"></i>
-                </span>
-                <p id="stat-pesan-belum" class="font-title font-bold text-4xl mt-4">0</p>
-                <p class="font-body font-medium text-xs text-slate-700 mt-2">
-                  Segera Periksa
-                </p>
-              </div>
+                  <p class="font-body font-medium text-xs text-slate-700 mt-2">
+                    Segera Periksa
+                  </p>
+                </div>
 
-              <!-- Pesan Sudah Dibaca -->
-              <div
-                class="bg-krim p-4 border-3 shadow-[8px_8px_0] col-span-1 sm:col-span-2 lg:col-span-1 row-span-1"
-              >
-                <span class="flex items-center justify-between border-b-2 pb-2">
+                <!-- Pesan Sudah Dibaca -->
+                <div
+                  class="bg-krim p-4 border-3 shadow-[8px_8px_0] col-span-1 sm:col-span-2 lg:col-span-1 row-span-1"
+                >
+                  <span
+                    class="flex items-center justify-between border-b-2 pb-2"
+                  >
+                    <p
+                      class="font-label font-bold text-xs uppercase tracking-wide"
+                    >
+                      Pesan sudah Dibaca
+                    </p>
+                    <i class="fa-solid fa-envelope-open text-sm"></i>
+                  </span>
                   <p
-                    class="font-label font-bold text-xs uppercase tracking-wide"
+                    id="stat-pesan-sudah"
+                    class="font-title font-bold text-4xl mt-4"
                   >
-                    Pesan sudah Dibaca
+                    0
                   </p>
-                  <i class="fa-solid fa-envelope-open text-sm"></i>
-                </span>
-                <p id="stat-pesan-sudah" class="font-title font-bold text-4xl mt-4">0</p>
-                <p class="font-body font-medium text-xs text-slate-700 mt-2">
-                  Tersimpan Diarsip
-                </p>
-              </div>
+                  <p class="font-body font-medium text-xs text-slate-700 mt-2">
+                    Tersimpan Diarsip
+                  </p>
+                </div>
 
-              <!-- historis -->
-              <div class="mt-10 col-span-3 h-100 row-span-4 bg-white border-3 shadow-[5px_5px_0] px-5 py-2 flex flex-col">
-                <h3 class="font-title font-semibold text-lg border-b-3 pb-2">Historis</h3>
-                
+                <!-- historis -->
+                <div
+                  class="mt-10 col-span-3 h-100 row-span-4 bg-white border-3 shadow-[5px_5px_0] px-5 py-2 flex flex-col"
+                >
+                  <h3 class="font-title font-semibold text-lg border-b-3 pb-2">
+                    Historis
+                  </h3>
 
-                <div id="historis-list" class="pt-5 flex flex-col gap-4 overflow-y-auto flex-1 min-h-0"></div>
+                  <div
+                    id="historis-list"
+                    class="pt-5 flex flex-col gap-4 overflow-y-auto flex-1 min-h-0"
+                  ></div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- ===== VIEW PROJEK ===== -->
-          <div id="view-projek" class="hidden">
-            <div class="flex flex-col gap-5">
-              <div class="flex items-center justify-between gap-4 flex-wrap border-b-3 pb-4 mt-4">
-                <div>
-                  <h4 class="font-title font-bold text-2xl">Kelola Projek</h4>
-                  <p class="font-body font-medium text-sm text-slate-600 mt-1">
-                    Tambah, edit, atau hapus projek portofoliomu.
-                  </p>
-                </div>
-                <button
-                  id="btn-tambah-projek"
-                  type="button"
-                  class="inline-flex items-center gap-2 bg-sidebar border-2 border-black font-label font-bold text-sm px-4 py-2 shadow-[3px_3px_0] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all duration-200"
+            <!-- ===== VIEW PROJEK ===== -->
+            <div id="view-projek" class="hidden">
+              <div class="flex flex-col gap-5">
+                <div
+                  class="flex items-center justify-between gap-4 flex-wrap border-b-3 pb-4 mt-4"
                 >
-                  <i class="fa-solid fa-plus"></i> Tambah Projek
-                </button>
-              </div>
-
-              <p id="projek-empty" class="hidden font-body font-medium text-sm text-slate-500 text-center py-10">
-                Belum ada projek. Klik "Tambah Projek" untuk mulai.
-              </p>
-
-              <div id="projek-grid" class="grid grid-cols-[repeat(auto-fill,minmax(min(100%,350px),1fr))] gap-6 px-5"></div>
-            </div>
-          </div>
-
-          <!-- ===== MODAL FORM PROJEK ===== -->
-          <div id="modal-projek" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
-            <div class="absolute inset-0 bg-black/60" data-close-modal></div>
-            <div class="relative bg-white border-4 border-black shadow-[8px_8px_0] w-full max-w-2xl max-h-[90vh] flex flex-col">
-              <header class="flex items-center justify-between border-b-3 px-6 py-4 shrink-0">
-                <h3 id="modal-projek-title" class="font-title font-bold text-2xl">Tambah Projek</h3>
-                <button
-                  type="button"
-                  data-close-modal
-                  class="text-2xl w-10 h-10 flex items-center justify-center rounded-full bg-sidebar shadow-[2px_2px_0] border-2 transition-all duration-300 hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[0_0_0]"
-                  aria-label="Tutup"
-                >
-                  <i class="fa-solid fa-xmark"></i>
-                </button>
-              </header>
-
-              <form id="form-projek" class="overflow-y-auto px-6 py-5 flex flex-col gap-4">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div class="flex flex-col gap-1">
-                    <label for="pj-judul" class="font-label font-bold text-sm">Judul *</label>
-                    <input id="pj-judul" type="text" required placeholder="Nama projek"
-                      class="bg-background border-2 border-black px-2 py-2 font-body text-sm focus:outline-none focus:shadow-[2px_2px_0] focus:bg-white transition" />
+                  <div>
+                    <h4 class="font-title font-bold text-2xl">Kelola Projek</h4>
+                    <p
+                      class="font-body font-medium text-sm text-slate-600 mt-1"
+                    >
+                      Tambah, edit, atau hapus projek portofoliomu.
+                    </p>
                   </div>
-
-                  <div class="flex flex-col gap-1">
-                    <label for="pj-kategori" class="font-label font-bold text-sm">Kategori *</label>
-                    <select id="pj-kategori" required
-                      class="bg-background border-2 border-black px-2 py-2 font-body text-sm focus:outline-none focus:shadow-[2px_2px_0] focus:bg-white transition">
-                      <option value="">Pilih kategori</option>
-                      <option value="Lomba">Lomba</option>
-                      <option value="Pribadi">Pribadi</option>
-                      <option value="Klien">Klien</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="flex flex-col gap-1">
-                  <label for="pj-deskripsi" class="font-label font-bold text-sm">Deskripsi Singkat (untuk kartu) *</label>
-                  <textarea id="pj-deskripsi" rows="3" required placeholder="1-2 kalimat ringkas untuk tampilan kartu projek"
-                    class="bg-background border-2 border-black px-2 py-2 font-body text-sm focus:outline-none focus:shadow-[2px_2px_0] focus:bg-white transition resize-y"></textarea>
-                </div>
-
-                <div class="flex flex-col gap-1">
-                  <label for="pj-konten" class="font-label font-bold text-sm">Konten Detail (halaman projek, boleh HTML)</label>
-                  <textarea id="pj-konten" rows="5" placeholder="Tulis konten panjang untuk halaman detail. Boleh pakai tag HTML seperti <h3>, <ul><li>, <p>"
-                    class="bg-background border-2 border-black px-2 py-2 font-body text-sm font-mono focus:outline-none focus:shadow-[2px_2px_0] focus:bg-white transition resize-y"></textarea>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div class="flex flex-col gap-1">
-                    <label for="pj-demo" class="font-label font-bold text-sm">Link Demo / Preview</label>
-                    <input id="pj-demo" type="url" placeholder="https://..."
-                      class="bg-background border-2 border-black px-2 py-2 font-body text-sm focus:outline-none focus:shadow-[2px_2px_0] focus:bg-white transition" />
-                  </div>
-                  <div class="flex flex-col gap-1">
-                    <label for="pj-repo" class="font-label font-bold text-sm">Link GitHub / Repo</label>
-                    <input id="pj-repo" type="url" placeholder="https://github.com/..."
-                      class="bg-background border-2 border-black px-2 py-2 font-body text-sm focus:outline-none focus:shadow-[2px_2px_0] focus:bg-white transition" />
-                  </div>
-                </div>
-
-                <div class="flex flex-col gap-1">
-                  <label class="font-label font-bold text-sm">Foto Projek (rasio 16:9)</label>
-                  <input id="pj-foto" type="file" accept="image/png,image/jpeg,image/webp"
-                    class="font-body text-sm" />
-                  <p class="hidden font-body font-medium text-xs text-slate-600 bg-background border-2 border-black px-3 py-2">
-                    <i class="fa-solid fa-crop mr-1"></i>Foto yang tidak 16:9 otomatis dipotong (crop) menjadi 16:9.
-                  </p>
-                  <div id="pj-foto-preview" class="hidden w-full aspect-video border-2 border-black overflow-hidden">
-                    <img id="pj-foto-preview-img" class="w-full h-full object-cover" alt="Preview foto" />
-                  </div>
-                  <input type="hidden" id="pj-image" />
-                </div>
-
-                <p id="pj-form-error" class="hidden font-body font-medium text-xs text-red-700 bg-red-100 border-2 border-red-700 px-3 py-2">
-                  <i class="fa-solid fa-triangle-exclamation mr-1"></i><span id="pj-form-error-text"></span>
-                </p>
-
-                <div class="flex justify-end items-center gap-3 mt-2 shrink-0">
-                  <button type="button" data-close-modal class="font-label font-bold text-sm px-5 py-2 border-2 border-black bg-background hover:bg-white transition">
-                    Batal
-                  </button>
-                  <button type="submit" id="pj-submit" class="font-label font-bold text-sm px-6 py-2 border-3 border-black bg-oren shadow-[3px_3px_0] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all duration-200">
-                    Simpan Projek
+                  <button
+                    id="btn-tambah-projek"
+                    type="button"
+                    class="inline-flex items-center gap-2 bg-sidebar border-2 border-black font-label font-bold text-sm px-4 py-2 shadow-[3px_3px_0] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all duration-200"
+                  >
+                    <i class="fa-solid fa-plus"></i> Tambah Projek
                   </button>
                 </div>
-              </form>
-            </div>
-          </div>
 
-          <!-- ===== VIEW PESAN ===== -->
-          <div id="view-pesan" class="hidden h-full">
-            <div class="flex flex-col gap-5 h-full">
-              <div class="border-b-3 mt-2 pb-4">
-                <h2 class="font-title font-bold text-4xl">Kelola Pesan</h2>
-                <p class="font-body font-medium text-base text-slate-600 mt-1">
-                  Kelola pesan masuk dari formulir kontak. Klik baris untuk melihat detail.
+                <p
+                  id="projek-empty"
+                  class="hidden font-body font-medium text-sm text-slate-500 text-center py-10"
+                >
+                  Belum ada projek. Klik "Tambah Projek" untuk mulai.
                 </p>
-              </div>
 
-              <div class="bg-white flex flex-col gap-5 border-3 py-5 px-5 flex-1 min-h-0">
-                <header class="flex justify-between items-center px-10 border-b-2 pb-2 shrink-0">
-                  <p class="font-label font-medium text-lg">Nama</p>
-                  <p class="font-label font-medium text-lg">Email</p>
-                  <p class="font-label font-medium text-lg">Tanggal</p>
-                </header>
-                <p id="pesan-empty" class="hidden font-body font-medium text-sm text-slate-500 text-center py-10">
-                  Belum ada pesan masuk.
-                </p>
-                <div id="pesan-list" class="flex flex-col gap-5 mt-5 overflow-y-auto flex-1 min-h-0"></div>
+                <div
+                  id="projek-grid"
+                  class="grid grid-cols-[repeat(auto-fill,minmax(min(100%,350px),1fr))] gap-6 px-5"
+                ></div>
               </div>
             </div>
 
-            <!-- MODAL DETAIL PESAN -->
-            <div id="modal-pesan-detail" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
-              <div class="absolute inset-0 bg-black/60" data-close-pesan></div>
-              <div class="relative bg-white border-4 border-black shadow-[8px_8px_0] w-full max-w-lg max-h-[90vh] flex flex-col">
-                <header class="flex items-center justify-between border-b-3 px-6 py-4 shrink-0">
-                  <h3 class="font-title font-bold text-2xl">Detail Pesan</h3>
+            <!-- ===== MODAL FORM PROJEK ===== -->
+            <div
+              id="modal-projek"
+              class="hidden fixed inset-0 z-50 flex items-center justify-center p-4"
+            >
+              <div class="absolute inset-0 bg-black/60" data-close-modal></div>
+              <div
+                class="relative bg-white border-4 border-black shadow-[8px_8px_0] w-full max-w-2xl max-h-[90vh] flex flex-col"
+              >
+                <header
+                  class="flex items-center justify-between border-b-3 px-6 py-4 shrink-0"
+                >
+                  <h3
+                    id="modal-projek-title"
+                    class="font-title font-bold text-2xl"
+                  >
+                    Tambah Projek
+                  </h3>
                   <button
                     type="button"
-                    data-close-pesan
+                    data-close-modal
                     class="text-2xl w-10 h-10 flex items-center justify-center rounded-full bg-sidebar shadow-[2px_2px_0] border-2 transition-all duration-300 hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[0_0_0]"
                     aria-label="Tutup"
                   >
                     <i class="fa-solid fa-xmark"></i>
                   </button>
                 </header>
-                <div class="overflow-y-auto px-6 py-5 flex flex-col gap-4">
-                  <div>
-                    <p class="font-label font-bold text-xs uppercase tracking-wide text-slate-500">Dari</p>
-                    <p id="pesan-detail-nama" class="font-title font-bold text-xl"></p>
+
+                <form
+                  id="form-projek"
+                  class="overflow-y-auto px-6 py-5 flex flex-col gap-4"
+                >
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="flex flex-col gap-1">
+                      <label for="pj-judul" class="font-label font-bold text-sm"
+                        >Judul *</label
+                      >
+                      <input
+                        id="pj-judul"
+                        type="text"
+                        required
+                        placeholder="Nama projek"
+                        class="bg-background border-2 border-black px-2 py-2 font-body text-sm focus:outline-none focus:shadow-[2px_2px_0] focus:bg-white transition"
+                      />
+                    </div>
+
+                    <div class="flex flex-col gap-1">
+                      <label
+                        for="pj-kategori"
+                        class="font-label font-bold text-sm"
+                        >Kategori *</label
+                      >
+                      <select
+                        id="pj-kategori"
+                        required
+                        class="bg-background border-2 border-black px-2 py-2 font-body text-sm focus:outline-none focus:shadow-[2px_2px_0] focus:bg-white transition"
+                      >
+                        <option value="">Pilih kategori</option>
+                        <option value="Lomba">Lomba</option>
+                        <option value="Pribadi">Pribadi</option>
+                        <option value="Klien">Klien</option>
+                      </select>
+                    </div>
                   </div>
-                  <div>
-                    <p class="font-label font-bold text-xs uppercase tracking-wide text-slate-500">Email</p>
-                    <p id="pesan-detail-email" class="font-body font-medium text-sm break-all"></p>
+
+                  <div class="flex flex-col gap-1">
+                    <label
+                      for="pj-deskripsi"
+                      class="font-label font-bold text-sm"
+                      >Deskripsi Singkat (untuk kartu) *</label
+                    >
+                    <textarea
+                      id="pj-deskripsi"
+                      rows="3"
+                      required
+                      placeholder="1-2 kalimat ringkas untuk tampilan kartu projek"
+                      class="bg-background border-2 border-black px-2 py-2 font-body text-sm focus:outline-none focus:shadow-[2px_2px_0] focus:bg-white transition resize-y"
+                    ></textarea>
                   </div>
-                  <div>
-                    <p class="font-label font-bold text-xs uppercase tracking-wide text-slate-500">Tujuan</p>
-                    <p id="pesan-detail-subject" class="font-body font-medium text-sm"></p>
+
+                  <div class="flex flex-col gap-1">
+                    <label for="pj-konten" class="font-label font-bold text-sm"
+                      >Konten Detail (halaman projek, boleh HTML)</label
+                    >
+                    <textarea
+                      id="pj-konten"
+                      rows="5"
+                      placeholder="Tulis konten panjang untuk halaman detail. Boleh pakai tag HTML seperti <h3>, <ul><li>, <p>"
+                      class="bg-background border-2 border-black px-2 py-2 font-body text-sm font-mono focus:outline-none focus:shadow-[2px_2px_0] focus:bg-white transition resize-y"
+                    ></textarea>
                   </div>
-                  <div>
-                    <p class="font-label font-bold text-xs uppercase tracking-wide text-slate-500">Isi Pesan</p>
-                    <p id="pesan-detail-message" class="font-body font-medium text-sm whitespace-pre-wrap"></p>
+
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="flex flex-col gap-1">
+                      <label for="pj-demo" class="font-label font-bold text-sm"
+                        >Link Demo / Preview</label
+                      >
+                      <input
+                        id="pj-demo"
+                        type="url"
+                        placeholder="https://..."
+                        class="bg-background border-2 border-black px-2 py-2 font-body text-sm focus:outline-none focus:shadow-[2px_2px_0] focus:bg-white transition"
+                      />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <label for="pj-repo" class="font-label font-bold text-sm"
+                        >Link GitHub / Repo</label
+                      >
+                      <input
+                        id="pj-repo"
+                        type="url"
+                        placeholder="https://github.com/..."
+                        class="bg-background border-2 border-black px-2 py-2 font-body text-sm focus:outline-none focus:shadow-[2px_2px_0] focus:bg-white transition"
+                      />
+                    </div>
                   </div>
-                  <div class="flex items-center gap-3 border-t-2 pt-3">
-                    <span id="pesan-detail-status" class="font-label font-bold text-xs px-2 py-1 border-2"></span>
-                    <p class="font-body font-medium text-xs text-slate-500">Status ini hanya penanda, pesan tetap bisa dibuka lagi.</p>
+
+                  <div class="flex flex-col gap-1">
+                    <label class="font-label font-bold text-sm"
+                      >Foto Projek (rasio 16:9)</label
+                    >
+                    <input
+                      id="pj-foto"
+                      type="file"
+                      accept="image/png,image/jpeg,image/webp"
+                      class="font-body text-sm"
+                    />
+                    <p
+                      class="hidden font-body font-medium text-xs text-slate-600 bg-background border-2 border-black px-3 py-2"
+                    >
+                      <i class="fa-solid fa-crop mr-1"></i>Foto yang tidak 16:9
+                      otomatis dipotong (crop) menjadi 16:9.
+                    </p>
+                    <div
+                      id="pj-foto-preview"
+                      class="hidden w-full aspect-video border-2 border-black overflow-hidden"
+                    >
+                      <img
+                        id="pj-foto-preview-img"
+                        class="w-full h-full object-cover"
+                        alt="Preview foto"
+                      />
+                    </div>
+                    <input type="hidden" id="pj-image" />
+                  </div>
+
+                  <p
+                    id="pj-form-error"
+                    class="hidden font-body font-medium text-xs text-red-700 bg-red-100 border-2 border-red-700 px-3 py-2"
+                  >
+                    <i class="fa-solid fa-triangle-exclamation mr-1"></i
+                    ><span id="pj-form-error-text"></span>
+                  </p>
+
+                  <div
+                    class="flex justify-end items-center gap-3 mt-2 shrink-0"
+                  >
+                    <button
+                      type="button"
+                      data-close-modal
+                      class="font-label font-bold text-sm px-5 py-2 border-2 border-black bg-background hover:bg-white transition"
+                    >
+                      Batal
+                    </button>
+                    <button
+                      type="submit"
+                      id="pj-submit"
+                      class="font-label font-bold text-sm px-6 py-2 border-3 border-black bg-oren shadow-[3px_3px_0] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all duration-200"
+                    >
+                      Simpan Projek
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- ===== VIEW PESAN ===== -->
+            <div id="view-pesan" class="hidden h-full">
+              <div class="flex flex-col gap-5 h-full">
+                <div class="border-b-3 mt-10 pb-4">
+                  <h2 class="font-title font-bold text-4xl">Kelola Pesan</h2>
+                  <p
+                    class="font-body font-medium text-base text-slate-600 mt-1"
+                  >
+                    Kelola pesan masuk dari formulir kontak. Klik baris untuk
+                    melihat detail.
+                  </p>
+                </div>
+
+                <div
+                  class="bg-white flex flex-col gap-5 border-3 py-5 px-5 flex-1 min-h-0"
+                >
+                  <header
+                    class="flex justify-between items-center px-10 border-b-2 pb-2 shrink-0"
+                  >
+                    <p class="font-label font-medium text-lg">Nama</p>
+                    <p class="font-label font-medium text-lg">Email</p>
+                    <p class="font-label font-medium text-lg">Tanggal</p>
+                  </header>
+                  <p
+                    id="pesan-empty"
+                    class="hidden font-body font-medium text-sm text-slate-500 text-center py-10"
+                  >
+                    Belum ada pesan masuk.
+                  </p>
+                  <div
+                    id="pesan-list"
+                    class="flex flex-col gap-5 mt-5 overflow-y-auto flex-1 min-h-0"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- MODAL DETAIL PESAN -->
+              <div
+                id="modal-pesan-detail"
+                class="hidden fixed inset-0 z-50 flex items-center justify-center p-4"
+              >
+                <div
+                  class="absolute inset-0 bg-black/60"
+                  data-close-pesan
+                ></div>
+                <div
+                  class="relative bg-white border-4 border-black shadow-[8px_8px_0] w-full max-w-lg max-h-[90vh] flex flex-col"
+                >
+                  <header
+                    class="flex items-center justify-between border-b-3 px-6 py-4 shrink-0"
+                  >
+                    <h3 class="font-title font-bold text-2xl">Detail Pesan</h3>
+                    <button
+                      type="button"
+                      data-close-pesan
+                      class="text-2xl w-10 h-10 flex items-center justify-center rounded-full bg-sidebar shadow-[2px_2px_0] border-2 transition-all duration-300 hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[0_0_0]"
+                      aria-label="Tutup"
+                    >
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </header>
+                  <div class="overflow-y-auto px-6 py-5 flex flex-col gap-4">
+                    <div>
+                      <p
+                        class="font-label font-bold text-xs uppercase tracking-wide text-slate-500"
+                      >
+                        Dari
+                      </p>
+                      <p
+                        id="pesan-detail-nama"
+                        class="font-title font-bold text-xl"
+                      ></p>
+                    </div>
+                    <div>
+                      <p
+                        class="font-label font-bold text-xs uppercase tracking-wide text-slate-500"
+                      >
+                        Email
+                      </p>
+                      <p
+                        id="pesan-detail-email"
+                        class="font-body font-medium text-sm break-all"
+                      ></p>
+                    </div>
+                    <div>
+                      <p
+                        class="font-label font-bold text-xs uppercase tracking-wide text-slate-500"
+                      >
+                        Tujuan
+                      </p>
+                      <p
+                        id="pesan-detail-subject"
+                        class="font-body font-medium text-sm"
+                      ></p>
+                    </div>
+                    <div>
+                      <p
+                        class="font-label font-bold text-xs uppercase tracking-wide text-slate-500"
+                      >
+                        Isi Pesan
+                      </p>
+                      <p
+                        id="pesan-detail-message"
+                        class="font-body font-medium text-sm whitespace-pre-wrap"
+                      ></p>
+                    </div>
+                    <div class="flex items-center gap-3 border-t-2 pt-3">
+                      <span
+                        id="pesan-detail-status"
+                        class="font-label font-bold text-xs px-2 py-1 border-2"
+                      ></span>
+                      <p class="font-body font-medium text-xs text-slate-500">
+                        Status ini hanya penanda, pesan tetap bisa dibuka lagi.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        </div>
       </section>
-
-      </main>
+    </main>
 
     <script type="module" src="/src/dashboard/dashboard.js"></script>
   </body>
