@@ -1,4 +1,5 @@
 import { categoryColor } from "../assets/data/projects.js";
+import { showToast } from "./toast.js";
 
 const grid = document.getElementById("projek-grid");
 const empty = document.getElementById("projek-empty");
@@ -120,8 +121,9 @@ form.addEventListener("submit", async (e) => {
   };
 
   try {
-    const url = editingId ? `/api/projects/${editingId}` : "/api/projects";
-    const method = editingId ? "PUT" : "POST";
+    const isNew = !editingId;
+    const url = isNew ? "/api/projects" : `/api/projects/${editingId}`;
+    const method = isNew ? "POST" : "PUT";
     const res = await fetch(url, {
       method,
       headers: { "Content-Type": "application/json" },
@@ -135,6 +137,7 @@ form.addEventListener("submit", async (e) => {
     await loadProjects();
     await loadHistoris();
     await updateStats();
+    if (isNew) showToast();
   } catch (err) {
     showError(err.message);
   }
